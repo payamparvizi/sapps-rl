@@ -61,7 +61,7 @@ def get_args():
     parser.add_argument("--lambda_S", type=float, default=5e-1)
     parser.add_argument("--sigma_s_bar", type=float, default=10)
     
-    #APS parameters
+    # APS parameters
     parser.add_argument("--lambda_P", type=float, default=0.5)
     parser.add_argument("--c_homog", type=float, default=50)
     parser.add_argument("--noise_pym", type=float, default=1e-12)
