@@ -2,32 +2,32 @@
 
 This directory contains the **real-world quadcopter control environment** used to evaluate **State-Adaptive Proportional Policy Smoothing (SAPPS)** in the paper:
 
-**Adaptive Policy Regularization for Smooth Control in Reinforcement Learning**
+*Adaptive Policy Regularization for Smooth Control in Reinforcement Learning*
 
-The experiments are conducted on a **Bitcraze Crazyflie 2.1 nano quadcopter** and demonstrate the effectiveness of SAPPS in producing **smooth, stable, and hardware-safe control policies** under real-world noise, delays, and disturbances.
+Experiments are conducted on a **Bitcraze Crazyflie 2.1** nano quadcopter and demonstrate the effectiveness of SAPPS in producing **smooth, stable, and hardware-safe** control policies under real-world noise, delays, and disturbances.
 
 ---
 
 ## Overview
 
-While simulation benchmarks are useful for controlled evaluation, real-world robotic systems introduce additional challenges, including sensor noise, actuator delays, communication latency, and unmodeled dynamics. These effects can significantly amplify high-frequency oscillations in learned policies.
+While simulation benchmarks are useful for controlled evaluation, real-world robotic systems introduce additional challenges such as sensor noise, actuator delays, communication latency, and unmodeled dynamics. These effects can significantly amplify high-frequency oscillations in learned policies.
 
-This environment formulates quadcopter hovering as a **continuous-control Markov Decision Process (MDP)** and enables training and deployment of reinforcement learning policies on physical hardware. It is specifically designed to evaluate whether SAPPS improves:
+This environment formulates quadcopter hovering as a **continuous-control Markov Decision Process (MDP)** and enables training and deployment of RL policies on physical hardware. It is designed to evaluate SAPPS's impact on:
 
 - control smoothness,
-- actuator efficiency, and
-- stability during real-world flight.
+- actuator efficiency
+- stability during real-world flight
 
 ---
 
 ## Hardware Platform
 
-- **Quadcopter**: Bitcraze Crazyflie 2.1  
-- **Radio**: Crazyradio PA  
-- **Sensor Deck**: Flow Deck v2  
+- **Quadcopter**: Bitcraze Crazyflie 2.1
+- **Radio**: Crazyradio PA (2.4 GHz USB radio)
+- **Sensor Deck**: Flow Deck v2 
 - **Task**: Altitude stabilization (hovering)
 
-The Crazyflie platform is selected due to its widespread use in research, lightweight design, and sensitivity to control oscillations.
+The Crazyflie platform is chosen for its widespread use in research, lightweight design, and sensitivity to control oscillations.
 
 ---
 
@@ -37,15 +37,15 @@ The Crazyflie platform is selected due to its widespread use in research, lightw
   Low-dimensional state representation including altitude, vertical velocity, and attitude-related measurements.
 
 - **Action Space**  
-  Continuous control commands corresponding to motor thrust adjustments.
+  Continuous control commands corresponding to motor thrust levels.
 
 - **Disturbances**  
-  Sensor noise, actuator delays, communication latency, and external perturbations.
+  Sensor noise, actuator delay, communication latency, and external perturbations.
 
 - **Reward Function**  
-  Encourages stable hovering while penalizing excessive action fluctuations.
+  Rewards stable hovering and penalizes excessive action fluctuations.
 
-This setup emphasizes **smooth control**, **robustness**, and **hardware safety**.
+This setup emphasizes **smooth control, robustness,** and **hardware safety**.
 
 ---
 
@@ -60,7 +60,7 @@ Quadcopter_Environment/
 │   └── PPO agent and neural network definitions
 │
 ├── crazyflie_env/
-│   └── Environment definition (simulation and real hardware)
+│   └── Environment definition (simulation and hardware interface)
 │
 ├── train.py
 │   └── Main training script
@@ -71,7 +71,7 @@ Quadcopter_Environment/
 └── README.md
 ```
 
-*(Directory contents may vary slightly depending on configuration.)*
+*(Contents may vary slightly depending on configuration.)*
 
 ---
 
@@ -80,32 +80,32 @@ Quadcopter_Environment/
 ### System Requirements
 - Linux operating system
 - Python ≥ 3.9
-- Crazyflie 2.1 hardware and Crazyradio PA
+- Bitcraze Crazyflie 2.1 (with Crazyradio PA)
 
-It is recommended to use a virtual environment (e.g., Conda or venv).
+It is recommended to use a Python virtual environment for installation.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-The environment relies on the **Bitcraze Crazyflie Python library (cflib)**. Please ensure that Crazyflie drivers and dependencies are correctly installed.
+This environment uses the **Bitcraze Crazyflie Python library (cflib)**. Ensure that the Crazyflie drivers and any required USB radio drivers are installed.
 
 ---
 
 ## Hardware Setup and Verification
 
-Before running RL experiments, verify communication with the Crazyflie:
+Before running any RL experiments, verify the connection to the Crazyflie:
 
 ```bash
 cfclient
 ```
 
 Ensure that:
-- the Crazyradio is detected,
-- the Crazyflie connects successfully, and
-- onboard sensor data updates correctly.
+- the Crazyradio PA dongle is plugged in and detected
+- the Crazyflie connects successfully
+- onboard sensor readings update correctly (via the client software)
 
-Flow Deck attachment should be verified before flight. Refer to the Bitcraze documentation for detailed setup and troubleshooting instructions.
+Also verify that the Flow Deck is attached and functioning. Refer to Bitcraze documentation for detailed setup and troubleshooting.
 
 ---
 
@@ -121,27 +121,35 @@ python train.py --task simulation
 python train.py --task real
 ```
 
-### Example: Setting Target Altitude and Action Limits
+### Example – Setting target altitude and action limits
 ```bash
 python train.py --task real --target_altitude 1.0 --action_range 0.20
 ```
 
-Configuration parameters can also be modified in the argument definitions under `utils/`.
+Configuration parameters (e.g., target altitude or action range) can also be adjusted in the argument definitions under `utils/`.
 
 ---
 
 ## Safety Notes
 
 - These experiments involve **real flying hardware**.
-- Always operate in a clear, enclosed space.
-- Use conservative action limits during initial testing.
+- Always operate in a clear, enclosed area.
+- Use conservative action limits for initial testing.
 - Never deploy untested policies directly on hardware.
+
+---
+
+## Reproducibility
+
+- Each experiment was repeated across multiple flight trials to ensure consistency.
+- Real-world variability (battery levels, sensor drift, etc.) can cause performance differences between runs.
+- We focus on **relative improvements** in control smoothness and stability rather than exact numerical replication of results.
 
 ---
 
 ## Relation to the Paper
 
-The quadcopter experiments provide **hardware validation** of SAPPS, demonstrating that the proposed method improves policy smoothness and control stability beyond simulation benchmarks.
+The quadcopter experiments serve as a **hardware validation** of SAPPS, demonstrating that the method achieves smoother control and improved stability in a physical system beyond what is observed in simulation benchmarks.
 
 ---
 
@@ -163,5 +171,4 @@ If you use this environment or experimental setup, please cite:
 
 ## Acknowledgments
 
-This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and the **National Research Council Canada (NRC)**.  
-The implementation builds upon the Bitcraze Crazyflie ecosystem and associated open-source tools.
+This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**. The implementation builds upon the Bitcraze Crazyflie ecosystem and its open-source tools.
