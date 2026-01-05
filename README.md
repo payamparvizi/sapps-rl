@@ -20,14 +20,7 @@ A significant challenge in applying reinforcement learning (RL) to continuous-co
 
 ## Key Idea
 
-**Smoothness should depend on how much the state changes.**
-
-Instead of enforcing fixed action penalties or architectural constraints, SAPPS introduces a **state-adaptive proportional regularization** that:
-
-- penalizes **large action changes** when **state changes are small**
-- penalizes **small action changes** when **state changes are large**
-
-This mechanism is **inspired by Lipschitz continuity**, but operates as a **local, state-transition-conditioned constraint**, rather than enforcing global Lipschitz bounds.
+SAPPS method that can be integrated into deep RL algorithms to improve policy smoothness in both static and dynamic continuous-control environments. SAPPS regularizes changes between consecutive actions based on the relative magnitude of variation between temporally consecutive observations, encouraging proportional action responses. This adaptive design penalizes unnecessary action fluctuations while preserving responsiveness to meaningful observation changes.
 
 ---
 
