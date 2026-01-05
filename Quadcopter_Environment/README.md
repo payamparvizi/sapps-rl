@@ -23,9 +23,21 @@ This environment supports both **simulation-based training** and **real-world de
 - actuator efficiency, and
 - stability during real-world flight.
 
+
 ## Experimental Videos
 
-gsdfg
+The following videos present real-world quadcopter hovering experiments conducted on a **Crazyflie 2.1** platform.  
+They qualitatively compare different policy regularization strategies under the same hardware conditions.
+
+### PPO
+[Video link]
+
+### PPO + CAPS
+[Video link]
+
+### PPO + SAPPS (Proposed Method)
+[Video link]
+
 
 ---
 
