@@ -53,10 +53,14 @@ Hyperparameter ranges and evaluation procedures match those reported in the pape
 ```
 MuJoCo_Environments/
 ├── packages/
-│ └── Auxiliary packages and baseline method implementations
+│ └── Local copy of the Tianshou reinforcement learning framework
 │
 ├── utils/
-│ └── Helper functions, wrappers, and experiment utilities
+│   ├── arguments/
+│   │   └── Experiment configuration and command-line argument definitions
+│   │
+│   └── compute_smoothness.py
+│       └── Utility for computing **volatility measure** in MuJoCo environments
 │
 ├── run_mujoco.py
 │ └── Entry point for training and evaluating PPO-based methods
@@ -66,8 +70,6 @@ MuJoCo_Environments/
 │
 └── README.md
 ```
-
-*(Contents may vary slightly by task.)*
 
 ---
 
