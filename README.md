@@ -119,6 +119,7 @@ If you use this code in your research, please cite:
   year          = {20XX},
   eprint        = {XXX},
   archivePrefix = {arXiv},
+  primaryClass  = {XXX},
   url           = {https://arxiv.org/abs/XXX}
 }
 ```
