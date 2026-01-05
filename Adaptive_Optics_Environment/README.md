@@ -44,7 +44,7 @@ Importantly, this repository does *not* aim to reproduce or extend the Photonics
   Atmospheric turbulence modeled using phase screens with configurable strength and drift velocity, spanning slowly to rapidly varying regimes.
 
 - **Reward Function**  
-  Optical performance metrics related to coupling efficiency or a Strehl ratio proxy.
+  Optical performance metrics related to coupling efficiency.
 
 This design emphasizes **low latency, partial observability**, and **fast temporal dynamics**, making it particularly sensitive to high-frequency control oscillations.
 
@@ -133,6 +133,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
