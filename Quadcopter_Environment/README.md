@@ -60,16 +60,19 @@ The Crazyflie platform is chosen for its widespread use in research and lightwei
 ```
 Quadcopter_Environment/
 ├── crazyflie_env/
-│ └── Crazyflie environment definition (simulation and real hardware)
+│   └── Crazyflie environment definition (simulation and real hardware)
 │
 ├── ppo/
-│ └── PPO agent implementation and policy/value network definitions
+│   └── PPO agent implementation and policy/value network definitions
 │
 ├── utils/
-│ └── Argument definitions and volatility measurement utilities
+│   └── Argument definitions and control smoothness evaluation utilities
 │
 ├── run_quadcopter.py
-│ └── Entry point for training and evaluation
+│   └── Entry point for training and evaluation
+│
+├── requirements.txt
+│   └── Python dependencies for the quadcopter environment
 │
 └── README.md
 ```
