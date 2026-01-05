@@ -14,7 +14,7 @@ Wavefront sensorless adaptive optics aims to correct atmospheric wavefront disto
 
 This environment formulates the AO control problem as a **continuous-control Markov Decision Process (MDP)** and is used to evaluate reinforcement learning algorithms under conditions where:
 
-- observations are low-dimensional and partially informative,
+- observations are low-dimensional and partially observable,
 - dynamics can change rapidly due to atmospheric turbulence, and
 - excessive control oscillations directly degrade optical performance.
 
@@ -137,3 +137,4 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
