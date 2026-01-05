@@ -5,10 +5,10 @@ This repository contains the official implementation of **State-Adaptive Proport
 
 SAPPS suppresses high-frequency oscillations in learned policies **without compromising performance**, particularly in **dynamic environments** where rapid adaptation is required.
 
-**Paper**: *Adaptive Policy Regularization for Smooth Control in Reinforcement Learning*  
-**Status**: Under review  
-**Authors**: Payam Parvizi, Abhishek Naik, Colin Bellinger, Ross Cheriton, Davide Spinello  
-**Repository**: https://github.com/payamparvizi/sapps-rl  
+📄 **Paper**: *Adaptive Policy Regularization for Smooth Control in Reinforcement Learning*  
+🔍 **Status**: Under review  
+👤 **Authors**: Payam Parvizi, Abhishek Naik, Colin Bellinger, Ross Cheriton, Davide Spinello  
+🔗 **Repository**: https://github.com/payamparvizi/sapps-rl  
 
 ---
 
