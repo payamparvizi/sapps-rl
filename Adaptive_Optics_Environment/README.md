@@ -112,6 +112,19 @@ By default, `run_wslao.py` loads its configuration via:
 from utils.arguments.arguments import get_args
 ```
 
+This default configuration corresponds to 50 m/s atmospheric drift velocity, as used in the main experimental evaluations reported in the paper.
+
+To evaluate SAPPS under different atmospheric dynamics, select the appropriate preset by modifying the configuration selection inside `utils/arguments/arguments.py`, or by directly importing the desired preset module:
+
+- `arguments_v_5mps.py` — slowly varying atmospheric turbulence
+- `arguments_v_50mps.py` — moderately fast atmospheric turbulence (default)
+- `arguments_v_500mps.py` — highly dynamic atmospheric turbulence
+
+### Notes
+
+- Logging and monitoring utilities (Weights & Biases) are initialized in run_wslao.py and can be enabled or disabled there as needed.
+- For reproducibility and consistency with the paper, the provided velocity-specific presets should be used without modification when reproducing reported results.
+
 ---
 
 ## Reproducibility
@@ -149,6 +162,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
