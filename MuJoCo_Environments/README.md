@@ -152,7 +152,7 @@ All methods are evaluated using the same network architecture and training proto
 
 ## Relation to the Paper
 
-The MuJoCo experiments serve as controlled benchmarks that isolate the effect of SAPPS on policy smoothness and performance, independent of domain-specific complexities (such as optical system dynamics or hardware constraints).
+The MuJoCo experiments provide standardized continuous-control benchmarks used to quantitatively compare SAPPS against baseline policy regularization methods in terms of both task performance and action smoothness.
 
 ---
 
