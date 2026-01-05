@@ -1,533 +1,123 @@
-# Reinforcement Learning with Proximal Policy Optimization (PPO) algorithm for the Bitcraze Crazyflie 2.1
+# Quadcopter Control Environment
 
-## Overview 
+This directory contains the **real-world quadcopter control environment** used to evaluate **State-Adaptive Proportional Policy Smoothing (SAPPS)** in the paper:
 
-This project implements the [Proximal Policy Optimization (PPO) algorithm](https://arxiv.org/abs/1707.06347) for the Crazyflie 2.1 drone. It includes both a simulated environment and a real-world setup to train the PPO algorithm for controlling the [Crazyflie 2.1](https://www.bitcraze.io/products/old-products/crazyflie-2-1/)  to hover at a specific altitude. Below is an image of the Crazyflie 2.1:
+**Adaptive Policy Regularization for Smooth Control in Reinforcement Learning**
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/e15c1612-ea9d-4a60-ac8f-029d1f8b9d1a" align="center" width="300">
-</p>
+The experiments demonstrate the applicability of SAPPS to **physical robotic systems**, highlighting its ability to produce smooth and stable control signals under real-world noise and disturbances.
 
-## Requirements:
+---
 
-- Linux Opearating System
-- Anaconda Distribution (optional but recommended)
-- Crazyflie 2.1
-- Crazyflie Radio
-- Flow deck v2
-- Batteries
+## Overview
 
-## Installation Instructions
+The quadcopter experiments are designed to validate SAPPS beyond simulation by deploying learned policies on a **nano quadcopter** platform. Unlike simulated environments, real-world control introduces sensor noise, actuator delays, and unmodeled dynamics, making policy smoothness critical for stable operation.
 
-This project uses a Linux operating system with Python 3.9.20. 
+This environment formulates the quadcopter hovering task as a **continuous-control Markov Decision Process (MDP)** and enables the evaluation of policy smoothness and performance on real hardware.
 
-To get started, it is recommended to [install Anaconda](https://www.anaconda.com/download) on your laptop or PC. Once Anaconda is installed, follow the steps below:
+---
 
-### 1. Create and activate the environment:
+## Key Characteristics
 
-Open a terminal and run the following commands:
+- **Platform**  
+  Nano quadcopter equipped with onboard sensors for attitude and altitude estimation.
 
-  ```bash
-  conda create --name crazyflie_env python=3.9.20
-  conda activate crazyflie_env
+- **Observation Space**  
+  Low-dimensional state representation including position, velocity, and attitude-related measurements.
 
-  ```
+- **Action Space**  
+  Continuous motor command signals controlling thrust and stabilization.
 
-### 2. Install Related Modules:
+- **Disturbances**  
+  Sensor noise, actuator delays, and external perturbations inherent to physical systems.
 
-  - Begin by upgrading the ```pip``` module to the latest version. Run the following command in your terminal:
-  ```
-  pip3 install --upgrade pip
-  ```
- 
- Then, download and unzip this repository to your computer. Once unzipped, navigate to the folder. For example, if the folder is located in your Downloads directory, use the following command to change to that directory:
+- **Reward Function**  
+  Designed to encourage stable hovering while penalizing excessive control oscillations.
 
-  ```
-  cd /home/[Your_Name]/Downloads/Crazyflie_RL-main
-  pip3 install -r requirements.txt
-  ```
-  
-  It is recommended to connect the wandb module for logging and experiment tracking. Follow these steps:
-  
-  First, Sign Up (Create an account) on the [Wandb website](https://wandb.ai/site/). Next, run the following commands in your terminal to connect with the website:
- 
-  ```
-  wandb login
-  ```
+This setup emphasizes **actuator efficiency**, **control smoothness**, and **robustness**.
 
-  After running ```wandb login```, it will prompt you for your API key. You can find your API key under ```User Settings -> API Keys ``` on the [Wandb website](https://wandb.ai/site/). Copy the key and paste it into the terminal when prompted.
-  
-  
-### 3. Verify the Installation:
+---
 
-  To ensure the installation was successful, run the following command in the terminal:
-  
-  ```
-  cfclient
-  ```
-
-  If the installation is successful, you should see the following interface:
-  
-  <p align="center">
-    <img src="https://github.com/user-attachments/assets/9d2658ad-227c-4f8a-993d-25e5ca59db67" align="center" width="500">
-  </p>
-
-  Note: If the command does not work, repeat the steps above until the issue is resolved or troubleshoot the issue.
-
-  ### 4. Download the Crazyflie Firmware:
-
-   Verify that ```git``` is installed by running:
-
-  ```
-  git --version
-  ```
-
-  If ```git``` is not installed, use the following commands to install it:
-
-  ```
-  sudo apt update
-  sudo apt install git
-  ```
-
-  Next, create a folder where you want to download the firmware. Use the following commands to set up the directory and download the required files:
-  I created the folder in my Documents
-
-  ```
-  cd /home/[Your_Name]/Documents
-  mkdir crazyflie_doc
-  cd crazyflie_doc
-  ```
-
-  #### Install the Dependencies:
-
-  Let's follow the steps outlined in this [installation guide](https://github.com/bitcraze/crazyflie-firmware/blob/master/docs/building-and-flashing/build.md). Let's proceed together!
-  
-  ```
-  sudo apt-get install make gcc-arm-none-eabi
-  ```
-
-  #### Tkinter Installation:
-
-Verify that ```tkinter``` is installed by running:
-
-  ```
-  python3 -m tkinter
-  ```
-
-  If ```tkinter``` is not installed, use the following commands to install it:
-
-  ```
-  sudo apt install python3-tk
-  ```
-
-  If the installation is successful, you should see the following interface:
-
-  <p align="center">
-    <img src="https://github.com/user-attachments/assets/e590f081-c63b-4665-8b51-2dfb0ffb7a84" align="center" width="250">
-  </p>
-
-  Press "QUIT".
-
-  #### Clone the Firmware Repository:
-
-  Download the Crazyflie firmware by running the following command:
-
-  ```
-  git clone --recursive https://github.com/bitcraze/crazyflie-firmware.git
-  ```
-
-  Verify that the firmware has been downloaded by checking the created folder (crazyflie_doc).
-
-  #### Initialize and Update Submodules:
-
-  Run the following commands to initialize and update the submodules:
-
-  ```
-  cd crazyflie-firmware
-  git submodule init
-  git submodule update
-  ```
-
-  Make sure no errors encountered
-
-  #### Compile the Firmware:
-
-  Compile the firmware using:
-
-  ```
-  make cf2_defconfig
-  make -j$(nproc)
-  ```
-
-  If no errors occur, the setup is complete.
-  
-  ## Connecting the Crazyflie and Radio
-
-  1. Connect the Crazyflie radio to your laptop or PC.
-  2. Turn on the Crazyflie drone
-  3. Verify communication between the drone and the radio:
-     - Run the following command in the terminal:
-     
-      ```
-      cfclient
-      ```
-  4. In the cfclient interface, press ```scan```. The interface should detect the radio and drone.
-     - If the drone isn’t detected, enter the address manually by writing ```0xE7E7E7E7E7```. I changed mine, so the modified address is ```0xE7E7E7E704```.
-     - press ```connect```.
-     - If you move the drone, you will start to see changes in the ```Fligh Data``` part.
-  5. We don't need this interface. The only thing we need to get from here is the Crazyflie radio and address information (e.g. ```'radio://0/80/2M/E7E7E7E7E7'```). We can close this interface.
-     
-## Final checks before Implementation
-
-### Connecting with a crazyflie:
-
-  Make sure ```cflib``` has been installed using command:
-
-  ```
-  pip3 show cflib
-  ```
-  
-  If not, run the following command:
-
-  ```
-  pip3 install cflib
-  ```
-  
-  Follow the steps given in the [Step-by-Step: Connecting, logging and parameters](https://www.bitcraze.io/documentation/repository/crazyflie-lib-python/master/user-guides/sbs_connect_log_param/) webpage to check if the Crazyflie is connected or not. Let's proceed together by writing a python code as follows:
-
-  ```
-  import logging
-  import time
-  
-  import cflib.crtp
-  from cflib.crazyflie import Crazyflie
-  from cflib.crazyflie.syncCrazyflie import SyncCrazyflie
-  
-  # URI to the Crazyflie to connect to
-  uri = 'radio://0/80/2M/E7E7E7E7E7'
-  
-  def simple_connect():
-  
-      print("Yeah, I'm connected! :D")
-      time.sleep(3)
-      print("Now I will disconnect :'(")
-  
-  if __name__ == '__main__':
-      # Initialize the low-level drivers
-      cflib.crtp.init_drivers()
-  
-      with SyncCrazyflie(uri, cf=Crazyflie(rw_cache='./cache')) as scf:
-  
-          simple_connect()
-  ```
-
-  If any error encountered, it is most probably from URI. Go back to ```cfclient``` interface and check the ```radio``` and ```address``` information and fix the code accordingly. For example, my URI is: ```uri = 'radio://0/100/2M/E7E7E7E704'```.
-
-  If the code works properly, you will see commands below:
-  
-  ```
-  Yeah, I'm connected! :D
-  Now I will disconnect :'(
-  ```
-
-  ### Connecting with a Flow Deck:
-
-  Flow Deck is a sensor that provides the detailed information about the position of the drone. We need to make sure it is connected. 
-  Run the following code:
-
-  ```
-  import logging
-  import sys
-  import time
-  from threading import Event
-  
-  import cflib.crtp
-  from cflib.crazyflie import Crazyflie
-  from cflib.crazyflie.syncCrazyflie import SyncCrazyflie
-  from cflib.utils import uri_helper
-  
-  URI = uri_helper.uri_from_env(default='radio://0/80/2M/E7E7E7E7E7')
-  
-  deck_attached_event = Event()
-  
-  logging.basicConfig(level=logging.ERROR)
-  
-  def param_deck_flow(_, value_str):
-      value = int(value_str)
-      print(value)
-      if value:
-          deck_attached_event.set()
-          print('Deck is attached!')
-      else:
-          print('Deck is NOT attached!')
-  
-  
-  if __name__ == '__main__':
-      cflib.crtp.init_drivers()
-  
-      with SyncCrazyflie(URI, cf=Crazyflie(rw_cache='./cache')) as scf:
-  
-          scf.cf.param.add_update_callback(group='deck', name='bcFlow2',
-                                           cb=param_deck_flow)
-          time.sleep(1)
-  
-  
-  ```
-
-If the FLow Deck connected properly, you will see commands below:
-
-  ```
-  Deck is attached!
-  ```
-
-More detailed infomration is provided in [Step-by-Step: Motion Commander](https://www.bitcraze.io/documentation/repository/crazyflie-lib-python/master/user-guides/sbs_motion_commander/).
-
-### Simple Motion Test:
-
-Before assigning specific tasks, test basic motions such as take-off, forward movement, backward movement, and landing. Place the drone in a safe, open area to prevent any accidents.
-
-Run the following code:
-
-  ```
-import logging
-import sys
-import time
-from threading import Event
-
-import cflib.crtp
-from cflib.crazyflie import Crazyflie
-from cflib.crazyflie.syncCrazyflie import SyncCrazyflie
-from cflib.positioning.motion_commander import MotionCommander
-from cflib.utils import uri_helper
-
-URI = uri_helper.uri_from_env(default='radio://0/80/2M/E7E7E7E7E7')
-
-DEFAULT_HEIGHT = 0.5
-
-deck_attached_event = Event()
-logging.basicConfig(level=logging.ERROR)
-
-
-def move_linear_simple(scf):
-    with MotionCommander(scf, default_height=DEFAULT_HEIGHT) as mc:
-        time.sleep(1)
-        mc.forward(0.5)
-        time.sleep(1)
-        mc.back(0.5)
-        time.sleep(1)
-        mc.land()
-
-def param_deck_flow(_, value_str):
-    value = int(value_str)
-    print(value)
-    if value:
-        deck_attached_event.set()
-        print('Deck is attached!')
-    else:
-        print('Deck is NOT attached!')
-
-if __name__ == '__main__':
-    cflib.crtp.init_drivers()
-
-    with SyncCrazyflie(URI, cf=Crazyflie(rw_cache='./cache')) as scf:
-
-        scf.cf.param.add_update_callback(group='deck', name='bcFlow2',
-                                         cb=param_deck_flow)
-        time.sleep(1)
-
-        if not deck_attached_event.wait(timeout=5):
-            print('No flow deck detected!')
-            sys.exit(1)
-
-        move_linear_simple(scf)
-  ```
-
-The other commands for the motion of the Crazyflie can be found in [motion_commander](https://www.bitcraze.io/documentation/repository/crazyflie-lib-python/master/api/cflib/positioning/motion_commander/) and [commander](https://www.bitcraze.io/documentation/repository/crazyflie-lib-python/master/api/cflib/crazyflie/commander/) webpages.
-
-### Logging while Flying:
-
-To check the information of the position and oriantation of the Crazyflie, we need to have log to export and analyze it.
-
-Run the following code, we can get the x, y and z position of the Crazyflie in real-time:
+## Directory Structure
 
 ```
-import logging
-import sys
-import time
-from threading import Event
-
-import cflib.crtp
-from cflib.crazyflie import Crazyflie
-from cflib.crazyflie.log import LogConfig
-from cflib.crazyflie.syncCrazyflie import SyncCrazyflie
-from cflib.positioning.motion_commander import MotionCommander
-from cflib.utils import uri_helper
-
-
-URI = uri_helper.uri_from_env(default='radio://0/80/2M/E7E7E7E707')
-
-DEFAULT_HEIGHT = 0.5
-
-deck_attached_event = Event()
-
-logging.basicConfig(level=logging.ERROR)
-
-position_estimate = [0, 0, 0]
-
-def move_linear_simple(scf):
-    with MotionCommander(scf, default_height=DEFAULT_HEIGHT) as mc:
-        time.sleep(1)
-        mc.land()
-
-
-def log_pos_callback(timestamp, data, logconf):
-    print(data)
-    global position_estimate
-    position_estimate[0] = data['stateEstimate.x']
-    position_estimate[1] = data['stateEstimate.y']
-    position_estimate[2] = data['stateEstimate.z']
-
-            
-def param_deck_flow(_, value_str):
-  value = int(value_str)
-  print(value)
-  if value:
-      deck_attached_event.set()
-      print('Deck is attached!')
-  else:
-      print('Deck is NOT attached!')
-
-if __name__ == '__main__':
-    cflib.crtp.init_drivers()
-
-    with SyncCrazyflie(URI, cf=Crazyflie(rw_cache='./cache')) as scf:
-
-        scf.cf.param.add_update_callback(group='deck', name='bcFlow2',
-                                         cb=param_deck_flow)
-        time.sleep(1)
-
-        logconf = LogConfig(name='Position', period_in_ms=10)
-        logconf.add_variable('stateEstimate.x', 'float')
-        logconf.add_variable('stateEstimate.y', 'float')
-        logconf.add_variable('stateEstimate.z', 'float')
-        scf.cf.log.add_config(logconf)
-        logconf.data_received_cb.add_callback(log_pos_callback)
-
-        if not deck_attached_event.wait(timeout=5):
-            print('No flow deck detected!')
-            sys.exit(1)
-
-        logconf.start()
-
-        move_linear_simple(scf)
-        logconf.stop()
-  ```
-
-Also, if interested in Roll, Pitch and Yaw orienations of the Crazyflie, replace the position information with orientation, or use both.
-
-```
-def log_pos_callback(timestamp, data, logconf):
-    print(data)
-    global position_estimate
-    position_estimate[0] = data['stabilizer.roll']
-    position_estimate[1] = data['stabilizer.pitch']
-    position_estimate[2] = data['stabilizer.yaw']
-
-.
-.
-.
-
-logconf = LogConfig(name='Stabilizer', period_in_ms=10)
-logconf.add_variable('stabilizer.roll', 'float')
-logconf.add_variable('stabilizer.pitch', 'float')
-logconf.add_variable('stabilizer.yaw', 'float')
-scf.cf.log.add_config(logconf)
-logconf.data_received_cb.add_callback(log_pos_callback)
+Quadcopter_Environment/
+├── configs/
+│   └── Experiment and controller configuration files
+│
+├── train.py
+│   └── Training script for PPO-based controllers
+│
+├── deploy.py
+│   └── Deployment script for running trained policies on hardware
+│
+├── utils/
+│   └── Helper functions for logging and evaluation
+│
+└── README.md
 ```
 
-## Running the RL Environment
+*(Directory contents may vary depending on hardware configuration.)*
 
-This work utilizes the Proximal Policy Optimization (PPO) algorithm in both simulated and real-world Crazyflie environments to achieve stable hovering at a specified altitude.  
+---
 
-Download and unzip this repository. Once done, if it is in Downloads for example, write the command:
+## Installation
 
-```
-cd /home/[Your_Name]/Downloads/Crazyflie_RL-main
-```
+This environment requires both software dependencies and compatible quadcopter hardware.
 
-### Choosing the Environment
-
-To train the PPO algorithm in the simulated Crazyflie environment, use the following command:
-
-```
-python train.py --task simulation
+```bash
+pip install -r requirements.txt
 ```
 
+Additional setup may be required for communication with the quadcopter (e.g., radio drivers or firmware tools). Please refer to the hardware documentation for platform-specific instructions.
 
-To train the PPO algorithm in the real-world Crazyflie environment, use this command:
+---
 
-```
-python train.py --task real
-```
+## Running Experiments
 
-### Setting the Target Altitude
-
-To specify the desired altitude, use the following command:
-
-```
-python train.py --target_altitude 1.0
+### Training (Simulation or Hardware-in-the-Loop)
+```bash
+python train.py
 ```
 
-In the example above, the target altitude is set to 1 meter.
-
-### Defining the Action Range
-
-For safety, it is recommended to specify the maximum allowable velocity (±) for the Crazyflie's actions. Use the following command to define the range:
-
+### Deployment on Hardware
+```bash
+python deploy.py
 ```
-python train.py --action_range 0.20
+
+Training and deployment configurations are specified via configuration files and script arguments.
+
+---
+
+## Usage Notes
+
+- These experiments involve **real hardware** and should be conducted with appropriate safety precautions.
+- Policy behavior may vary across hardware units due to manufacturing tolerances and battery conditions.
+- Exact numerical reproducibility is not expected; emphasis is placed on qualitative stability and smoothness improvements.
+
+---
+
+## Relation to the Paper
+
+The quadcopter experiments provide a **hardware validation** of SAPPS, demonstrating that the proposed method improves policy smoothness and control stability in real-world robotic systems.
+
+---
+
+## Citation
+
+If you use this code or experimental setup, please cite the associated paper:
+
+```bibtex
+@article{parvizi2026sapps,
+  title={Adaptive Policy Regularization for Smooth Control in Reinforcement Learning},
+  author={Parvizi, Payam and Naik, Abhishek and Bellinger, Colin and Cheriton, Ross and Spinello, Davide},
+  journal={IEEE Transactions on Automation Science and Engineering},
+  year={2026},
+  note={under review}
+}
 ```
-In this example, the maximum velocity is set to 0.20 meters per second.
 
-### Example of a Combined Command
+---
 
-A command that incorporates these parameters might look like this:
+## Acknowledgments
 
-```
-python train.py --task simulation --target_altitude 1.0 --action_range 0.20
-```
-### Modifying Additional Parameters
-
-Other parameters can also be adjusted in a similar manner using command line arguments. Alternatively, they can be manually edited in the [arguments.py](./utils/arguments.py) file.
-
-
-## How it works
-
-### [train.py](train.py)
-
-The [train.py](train.py) file is the main executable responsible for parsing the arguments defined in [arguments.py](./utils/arguments.py). It also initializes both the environment and RL algorithm using the parameters specified in the file.
-
-### [arguments.py](./utils/arguments.py)
-
-The [arguments.py](./utils/arguments.py) file defines a set of arguments intended to be parsed from the command line. These arguments are utilized by the [train.py](train.py) file to configure the RL algorithm and the Crazyflie environment. Detailed instructions for using the command line can be found in the ```Running the RL Environment``` section.
-
-### [networks.py](./ppo/networks.py)
-
-The [networks.py](./ppo/networks.py) file contains the neural network architectures for the policy and value function used in the PPO algorithm. Parameters for these neural networks can be adjusted either in the [arguments.py](./utils/arguments.py) file or directly via the command line.
-
-### [ppo_agent.py](./ppo/ppo_agent.py)
-
-The [ppo_agent.py](./ppo/ppo_agent.py) file implements the PPO algorithm and manages the training process.
-
-### [crazyflie_env.py](./crazyflie_env/crazyflie_env.py)
-
-The [crazyflie_env.py](./crazyflie_env/crazyflie_env.py) file defines the environment used for training with the PPO algorithm. It includes the ```reset()```, ```step()``` , and ```render()```  functions, supporting both ```simulation```  and ```real``` environments. This file specifies the observation space, action space, and reward function, all of which can be customized based on the task.
-
-## Results
-
-<img src="https://github.com/user-attachments/assets/57f98914-fb42-44f2-af27-04c2d0a01b44" width="400">
-<img src="https://github.com/user-attachments/assets/264a62ce-1a46-4522-a31b-923de4d89dbf" width="420">
-
-## Contact
-
-If you have any questions, feel free to email pparv056@uottawa.ca
+This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and the **National Research Council Canada (NRC)**.
