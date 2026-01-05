@@ -174,4 +174,4 @@ If you use this code, please cite the associated paper:
 
 ## Acknowledgments
 
-This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**. These experiments build upon the MuJoCo physics engine and the OpenAI Gymnasium framework.
+This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**. These experiments build upon the MuJoCo physics engine and the Farama Gymnasium framework.
