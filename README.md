@@ -85,9 +85,9 @@ This repository assumes a standard Python-based reinforcement learning stack.
 - Python ≥ 3.8  
 - PyTorch  
 - NumPy  
-- OpenAI Gymnasium / MuJoCo  
+- OpenAI Gymnasium (with MuJoCo support)
 
-Additional dependencies may be required depending on the selected environment and are specified within each subdirectory.
+Each environment subdirectory includes its own requirements.txt listing any additional dependencies (e.g., specialized simulation libraries or hardware interface packages).
 
 ---
 
