@@ -52,17 +52,17 @@ Hyperparameter ranges and evaluation procedures match those reported in the pape
 
 ```
 MuJoCo_Environments/
-├── configs/
-│   └── Environment-specific configuration files
-│
-├── train.py
-│   └── Training script for PPO variants (with or without SAPPS)
-│
-├── evaluate.py
-│   └── Evaluation and plotting utilities
+├── packages/
+│ └── Auxiliary packages and baseline method implementations
 │
 ├── utils/
-│   └── Helper functions and wrappers
+│ └── Helper functions, wrappers, and experiment utilities
+│
+├── run_mujoco.py
+│ └── Entry point for training and evaluating PPO-based methods
+│
+├── requirements.txt
+│ └── Python dependencies for MuJoCo experiments
 │
 └── README.md
 ```
