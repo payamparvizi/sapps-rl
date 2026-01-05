@@ -108,7 +108,7 @@ Each `arguments_v_*` file defines the full experimental configuration for a spec
 
 By default, `run_wslao.py` loads its configuration via:
 
-```bash
+```
 from utils.arguments.arguments import get_args
 ```
 
@@ -126,7 +126,7 @@ To evaluate SAPPS under different atmospheric dynamics, select the appropriate p
 
 ### Selecting the Policy Regularization Method
 
-The WSL-AO environment supports multiple policy regularization methods through a command-line argument. The selected option determines both the `policy regularization strategy`.
+The WSL-AO environment supports multiple policy regularization methods through a command-line argument. The selected option determines the **policy regularization strategy**.
 
 #### Policy selection argument
 
@@ -202,6 +202,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
