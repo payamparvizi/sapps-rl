@@ -39,11 +39,10 @@ All environments have continuous state and action spaces, and all experiments us
 - **Policy Types Compared**:
   - Vanilla PPO
   - CAPS (Conditioning for Action Policy Smoothness)
-  - LipsNet
     
 - **Evaluation Metrics**:
   - Average episodic return
-  - Policy smoothness (action variation)
+  - Policy smoothness (action fluctuation)
 
 Hyperparameter ranges and evaluation procedures match those reported in the paper.
 
