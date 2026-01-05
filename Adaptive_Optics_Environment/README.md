@@ -151,6 +151,21 @@ By default:
 - `standard_PPO`, `PPO_CAPS`, and `PPO_SAPPS` use a **standard MLP policy network**.
 - `PPO_LipsNet` replaces the MLP with a **LipsNet architecture**.
 
+#### Global vs. local Lipschitz constraint (LipsNet only)
+
+When using `PPO_LipsNet`, the type of Lipschitz constraint is controlled by:
+
+```bash
+--global_lips
+```
+
+- `--global_lips 1` — **LipsNet-G** (global Lipschitz constraint)
+- `--global_lips 0` — **LipsNet-L** (Local Lipschitz constraint)
+
+Default:
+```bash
+--global_lips 1
+```
 
 ---
 
@@ -187,6 +202,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
