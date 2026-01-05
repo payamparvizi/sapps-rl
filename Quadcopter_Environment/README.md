@@ -48,7 +48,9 @@ The Crazyflie platform is chosen for its widespread use in research and lightwei
 - **Reward Function**  
   The reward is primarily based on the absolute altitude error relative to the target altitude.
 
-This setup emphasizes **smooth control, robustness,** and **hardware safety**.
+- **Safety and Termination Conditions**  
+  Episodes terminate upon exceeding predefined altitude limits, violating roll or pitch safety bounds (real hardware), or reaching the maximum number of steps. In real-hardware mode, emergency stop and landing procedures are automatically triggered to ensure safe operation.
+  
 
 ---
 
