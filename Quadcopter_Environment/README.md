@@ -123,7 +123,6 @@ python train.py --task real --target_altitude 1.0 --action_range 0.20
 
 Configuration parameters (e.g., target altitude or action range) can also be adjusted in the argument definitions under `utils/`.
 
----
 
 ***Notes***
 - Each experiment was repeated across multiple flight trials to ensure consistency.
