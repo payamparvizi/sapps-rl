@@ -35,10 +35,10 @@ Importantly, this repository does *not* aim to reproduce or extend the Photonics
 ## Environment Characteristics
 
 - **Observation Space**  
-  Low-dimensional photodetector measurements derived from the focal-plane intensity distribution (e.g., quadrant or coarse pixel array).
+  Low-dimensional photodetector measurements derived from the focal-plane intensity distribution.
 
 - **Action Space**  
-  Continuous control commands applied to a deformable mirror, parameterized either directly in actuator space or via low-order modal representations.
+  Continuous control commands applied to a deformable mirror, parameterized using low-order Zernike modal representations.
 
 - **Dynamics**  
   Atmospheric turbulence modeled using phase screens with configurable strength and drift velocity, spanning quasi-static to rapidly varying regimes.
@@ -133,6 +133,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
