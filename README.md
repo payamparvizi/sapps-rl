@@ -79,7 +79,7 @@ An optical control problem for satellite-to-ground optical communication. SAPPS 
 
 ## Installation
 
-This repository assumes a standard Python-based reinforcement learning stack.
+All experiments are implemented in Python and use standard deep reinforcement learning libraries.
 
 ### Requirements
 - Python ≥ 3.8  
