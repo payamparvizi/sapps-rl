@@ -94,6 +94,16 @@ python run_wslao.py
 
 ### Selecting the atmospheric regime (turbulence drift velocity)
 
+The WSL-AO environment uses **velocity-specific configuration files** located in:
+
+```
+utils/arguments/
+├── arguments.py
+├── arguments_v_5mps.py
+├── arguments_v_50mps.py
+└── arguments_v_500mps.py
+```
+
 Key configuration parameters—such as atmospheric conditions, turbulence drift velocity, observation dimensions, and action parameterization—are defined within the script and associated configuration files.
 
 ---
@@ -133,6 +143,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
