@@ -58,7 +58,7 @@ Adaptive_Optics_Environment/
 │   └── Gymnasium-compatible AO environment
 │
 ├── packages/
-│   └── Optical modeling and simulation utilities
+│   └── Auxiliary packages for reinforcement learning and baseline methods
 │
 ├── utils/
 │   └── Helper functions for environment simulation and evaluation
@@ -133,6 +133,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
