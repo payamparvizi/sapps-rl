@@ -93,13 +93,13 @@ Each environment subdirectory includes its own `requirements.txt` listing any ad
 
 ## Running Experiments
 
-Each environment directory contains its own training and evaluation scripts. Please refer to environment-specific scripts and configuration files for details on hyperparameters and experimental settings.
+Each environment directory contains its own training and evaluation scripts. Please refer to the specific environment's README and scripts for details on usage, hyperparameters, and experimental settings.
 
 ---
 
 ## Reproducibility
 
-All reported results are averaged over multiple random seeds. Hyperparameter ranges match those described in the paper, and evaluation protocols are consistent across all compared methods. Due to simulator versions, hardware differences, and stochasticity, exact numerical reproduction may vary; however, qualitative trends are robust.
+All results reported in the paper are averaged over multiple random seeds, and hyperparameters match those described in the paper. While evaluation protocols are consistent across methods, differences in simulator versions, hardware, or inherent randomness may cause your results to vary slightly. However, the qualitative performance trends should remain consistent.
 
 ---
 
@@ -137,4 +137,4 @@ GitHub: https://github.com/payamparvizi
 
 ## Acknowledgments
 
-This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and in part by the **National Research Council Canada (NRC)**.
+This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
