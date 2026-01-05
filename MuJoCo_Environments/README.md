@@ -81,7 +81,7 @@ Ensure that MuJoCo and Gymnasium are installed and configured.
 pip install -r requirements.txt
 ```
 
-A working MuJoCo installation (e.g., MuJoCo 2.x) is required. Refer to the official MuJoCo and Gymnasium documentation for platform-specific installation details.
+A working MuJoCo installation (e.g., MuJoCo 2.1) is required. Refer to the official MuJoCo and Gymnasium documentation for platform-specific installation details.
 
 ---
 
