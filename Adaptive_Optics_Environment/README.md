@@ -24,15 +24,20 @@ The focus of this environment within the current repository is to assess whether
 
 ## Relation to Prior Work
 
-This environment builds conceptually on prior work in reinforcement learning for wavefront sensorless adaptive optics, including earlier AO-RL simulation frameworks developed by the authors. However:
+This environment builds conceptually on prior work in reinforcement learning for wavefront sensorless adaptive optics, including earlier AO-RL simulation frameworks developed by the authors. In particular, related background and environment design details can be found in:
+
+**Parvizi et al., _Reinforcement Learning Environment for Wavefront Sensorless Adaptive Optics in Single-Mode Fiber Coupled Optical Satellite Communications Downlinks_, Photonics (2023)**  
+🔗 https://doi.org/10.3390/photonics10121371
+
+However:
 
 - the **learning objectives**,  
 - the **control regularization strategy**, and  
 - the **experimental focus on action smoothness under dynamic conditions**  
 
-are distinct from previous publications.
+in the present work are distinct from those in the above publication.
 
-Importantly, this repository does **not** aim to reproduce or extend prior AO-RL results. Instead, it reuses a compatible simulation framework to provide a **controlled and challenging testbed** for evaluating adaptive policy regularization.
+Importantly, this repository does **not** aim to reproduce or extend the Photonics (2023) results. Instead, it reuses a compatible simulation framework to provide a **controlled and challenging testbed** for evaluating adaptive policy regularization.
 
 ---
 
@@ -123,16 +128,14 @@ The environment is **not required** to apply SAPPS in other domains such as MuJo
 If you use this environment or build upon it, please cite the associated paper:
 
 ```bibtex
-@article{parvizi2026sapps,
+@article{parvizi2025sapps,
   title={Adaptive Policy Regularization for Smooth Control in Reinforcement Learning},
   author={Parvizi, Payam and Naik, Abhishek and Bellinger, Colin and Cheriton, Ross and Spinello, Davide},
   journal={IEEE Transactions on Automation Science and Engineering},
-  year={2026},
+  year={2025},
   note={under review}
 }
 ```
-
-For prior AO-RL simulation work that informed this environment design, please also see the related publication by the authors in *Photonics* (2023).
 
 ---
 
