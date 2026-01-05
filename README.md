@@ -110,7 +110,7 @@ If you use this code in your research, please cite:
 ```bibtex
 @article{parvizi2025sapps,
   title={Adaptive Policy Regularization for Smooth Control in Reinforcement Learning},
-  author={Parvizi, Payam},
+  author={Parvizi, Payam and Naik, Abhishek and Bellinger, Colin and Cheriton, Ross and Spinello, Davide},
   journal={IEEE Transactions on Automation Science and Engineering},
   year={2025},
   note={under review}
