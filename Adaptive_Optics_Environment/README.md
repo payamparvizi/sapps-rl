@@ -13,7 +13,7 @@ The environment is designed to evaluate **policy smoothness and control responsi
 Wavefront sensorless adaptive optics aims to correct atmospheric wavefront distortions **without explicit wavefront sensing**, relying instead on low-dimensional photodetector measurements and closed-loop control of a deformable mirror.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/2b1b4781-e5b9-4d0d-91ef-a9da287a2d6c" align="center" width="500">
+  <img src="https://github.com/user-attachments/assets/2b1b4781-e5b9-4d0d-91ef-a9da287a2d6c" align="center" width="400">
 </p>
 
 
@@ -205,6 +205,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
