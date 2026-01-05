@@ -41,9 +41,9 @@ The Crazyflie platform is chosen for its widespread use in research and lightwei
   A single continuous control input corresponding to the commanded vertical velocity, bounded within a predefined action range to ensure safe operation.
 
 - **Dynamics**
-The environment supports both:
-- Simulation mode, which models altitude dynamics with actuation lag and additive noise, and
-- Real-hardware mode, which interfaces directly with the Crazyflie flight stack and executes velocity commands through the onboard motion controller.
+  The environment supports both:
+  - Simulation mode, which models altitude dynamics with actuation lag and additive noise, and
+  - Real-hardware mode, which interfaces directly with the Crazyflie flight stack and executes velocity commands through the onboard motion controller.
 
 - **Reward Function**  
   Rewards stable hovering and penalizes excessive action fluctuations.
