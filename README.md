@@ -85,7 +85,7 @@ All experiments are implemented in Python and use standard deep reinforcement le
 - Python ≥ 3.9  
 - PyTorch  
 - NumPy  
-- OpenAI Gymnasium (with MuJoCo support)
+- Farama Gymnasium (with MuJoCo support)
 
 Each environment subdirectory includes its own `requirements.txt` listing any additional dependencies (e.g., specialized simulation libraries or hardware interface packages).
 
