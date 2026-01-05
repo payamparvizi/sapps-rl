@@ -139,8 +139,6 @@ To evaluate SAPPS under different atmospheric dynamics, select the appropriate p
 
 The adaptive optics experiments in the paper use this environment to show that **state-adaptive policy regularization (SAPPS)** improves control smoothness and robustness in highly dynamic environments.
 
-*Note:* This environment is **not required** to apply SAPPS in other domains (e.g., MuJoCo or robotic control).
-
 ---
 
 ## Citation
@@ -162,6 +160,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
