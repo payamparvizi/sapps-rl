@@ -128,11 +128,11 @@ The environment is **not required** to apply SAPPS in other domains such as MuJo
 If you use this environment or build upon it, please cite the associated paper:
 
 ```bibtex
-@article{parvizi2025sapps,
+@article{parvizi2026sapps,
   title={Adaptive Policy Regularization for Smooth Control in Reinforcement Learning},
   author={Parvizi, Payam and Naik, Abhishek and Bellinger, Colin and Cheriton, Ross and Spinello, Davide},
   journal={IEEE Transactions on Automation Science and Engineering},
-  year={2025},
+  year={2026},
   note={under review}
 }
 ```
@@ -142,3 +142,4 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and the **National Research Council Canada (NRC)**.
+
