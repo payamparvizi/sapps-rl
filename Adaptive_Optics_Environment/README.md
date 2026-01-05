@@ -120,10 +120,14 @@ To evaluate SAPPS under different atmospheric dynamics, select the appropriate p
 - `arguments_v_50mps.py` — moderately fast atmospheric turbulence (default)
 - `arguments_v_500mps.py` — highly dynamic atmospheric turbulence
 
-### Notes
-
+#### Notes
 - Logging and monitoring utilities (Weights & Biases) are initialized in run_wslao.py and can be enabled or disabled there as needed.
 - For reproducibility and consistency with the paper, the provided velocity-specific presets should be used without modification when reproducing reported results.
+
+### Selecting the Policy Regularization Method
+
+.....
+
 
 ---
 
@@ -160,6 +164,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
