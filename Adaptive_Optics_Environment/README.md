@@ -170,8 +170,6 @@ Default:
 --global_lips 1
 ```
 
----
-
 Exact numerical reproducibility is not expected due to stochastic turbulence generation.
 
 
@@ -202,5 +200,6 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
