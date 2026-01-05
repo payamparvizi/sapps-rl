@@ -4,38 +4,53 @@ This directory contains the **reinforcement learning (RL) environment for wavefr
 
 **Adaptive Policy Regularization for Smooth Control in Reinforcement Learning**
 
-The environment is designed to evaluate policy smoothness and control performance in **highly dynamic optical systems**, motivated by **satellite-to-ground optical communication**.
+The environment is designed to evaluate **policy smoothness and control responsiveness** in **highly dynamic optical systems**, with a primary motivation drawn from **satellite-to-ground optical communication** scenarios.
 
 ---
 
 ## Overview
 
-Wavefront sensorless adaptive optics aims to correct atmospheric wavefront distortions **without explicit wavefront sensing**, relying instead on low-dimensional photodetector measurements and closed-loop control.
+Wavefront sensorless adaptive optics aims to correct atmospheric wavefront distortions **without explicit wavefront sensing**, relying instead on low-dimensional photodetector measurements and closed-loop control of a deformable mirror.
 
-This environment formulates the AO control problem as a **continuous-control Markov Decision Process (MDP)** and enables the evaluation of deep RL algorithms under:
+This environment formulates the AO control problem as a **continuous-control Markov Decision Process (MDP)** and is used to evaluate reinforcement learning algorithms under conditions where:
 
-- quasi-static atmospheric turbulence  
-- rapidly changing turbulence with high drift velocities  
+- observations are low-dimensional and partially informative,
+- dynamics can change rapidly due to atmospheric turbulence, and
+- excessive control oscillations directly degrade optical performance.
 
-The environment is used to assess the ability of SAPPS and baseline methods to produce **smooth yet responsive control signals** in highly dynamic conditions.
+The focus of this environment within the current repository is to assess whether **SAPPS** enables **smooth yet responsive control** in such challenging regimes.
 
 ---
 
-## Key Characteristics
+## Relation to Prior Work
+
+This environment builds conceptually on prior work in reinforcement learning for wavefront sensorless adaptive optics, including earlier AO-RL simulation frameworks developed by the authors. However:
+
+- the **learning objectives**,  
+- the **control regularization strategy**, and  
+- the **experimental focus on action smoothness under dynamic conditions**  
+
+are distinct from previous publications.
+
+Importantly, this repository does **not** aim to reproduce or extend prior AO-RL results. Instead, it reuses a compatible simulation framework to provide a **controlled and challenging testbed** for evaluating adaptive policy regularization.
+
+---
+
+## Environment Characteristics
 
 - **Observation Space**  
-  Low-dimensional photodetector measurements derived from the focal plane intensity distribution.
+  Low-dimensional photodetector measurements derived from the focal plane intensity distribution (e.g., quadrant or coarse pixel arrays).
 
 - **Action Space**  
-  Continuous control commands applied to a deformable mirror model.
+  Continuous control commands applied to a deformable mirror, parameterized either directly in actuator space or via low-order modal representations.
 
 - **Dynamics**  
-  Atmospheric turbulence modeled using phase screens with configurable drift velocity and strength.
+  Atmospheric turbulence modeled using phase screens with configurable strength and drift velocity, enabling quasi-static to rapidly varying regimes.
 
 - **Reward Function**  
-  Based on optical performance metrics (e.g., fiber coupling efficiency / Strehl-related measures).
+  Optical performance metrics related to coupling efficiency or Strehl-like measures.
 
-This design prioritizes **low latency**, **partial observability**, and **fast dynamics**, making it a challenging benchmark for RL-based control.
+This design emphasizes **low latency**, **partial observability**, and **fast temporal dynamics**, making it particularly sensitive to high-frequency control oscillations.
 
 ---
 
@@ -71,7 +86,7 @@ It is recommended to use a **separate virtual environment** for this module.
 pip install -r requirements.txt
 ```
 
-Some dependencies may require system-level libraries (e.g., for numerical or optical simulation). Please refer to the comments in `requirements.txt` if issues arise.
+Some dependencies (e.g., optical simulation libraries) may require system-level packages. Please refer to the comments in `requirements.txt` if installation issues arise.
 
 ---
 
@@ -83,28 +98,29 @@ To train or evaluate an RL agent in the wavefront sensorless AO environment:
 python run_wslao.py
 ```
 
-Configuration options (e.g., turbulence strength, drift velocity, RL algorithm settings) are specified within the script and related configuration files.
+Key configuration parameters—such as atmospheric regime, turbulence velocity, observation dimension, and action parameterization—are defined within the script and associated configuration files.
 
 ---
 
 ## Usage Notes
 
-- This environment is intended for **research and evaluation purposes**
-- Exact numerical reproducibility may vary due to stochastic turbulence generation
-- The implementation prioritizes **relative comparisons** between methods rather than absolute optical performance
+- This environment is intended for **research and comparative evaluation purposes**.
+- Exact numerical reproducibility is not expected due to stochastic turbulence generation.
+- Emphasis is placed on **relative performance and smoothness comparisons** between methods rather than absolute optical metrics.
 
 ---
 
 ## Relation to the Paper
 
-This environment is used exclusively for the **adaptive optics experiments** reported in the paper.  
-It is **not required** to understand or apply the SAPPS method in other domains such as MuJoCo or robotics.
+The adaptive optics experiments reported in the paper use this environment to demonstrate that **state-adaptive policy regularization** improves control smoothness and robustness in highly dynamic, partially observed systems.
+
+The environment is **not required** to apply SAPPS in other domains such as MuJoCo benchmarks or robotic control tasks.
 
 ---
 
 ## Citation
 
-If you use this environment in your research, please cite the associated paper:
+If you use this environment or build upon it, please cite the associated paper:
 
 ```bibtex
 @article{parvizi2026sapps,
@@ -116,9 +132,10 @@ If you use this environment in your research, please cite the associated paper:
 }
 ```
 
+For prior AO-RL simulation work that informed this environment design, please also see the related publication by the authors in *Photonics* (2023).
+
 ---
 
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and the **National Research Council Canada (NRC)**.
-
