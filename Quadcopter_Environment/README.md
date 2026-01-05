@@ -63,18 +63,16 @@ Quadcopter_Environment/
 │ └── Crazyflie environment definition (simulation and real hardware)
 │
 ├── ppo/
-│ └── PPO agent and policy network implementations
+│ └── PPO agent implementation and policy/value network definitions
 │
 ├── utils/
-│ └── Argument parsing, logging, and supporting utilities
+│ └── Argument definitions and volatility measurement utilities
 │
 ├── run_quadcopter.py
 │ └── Entry point for training and evaluation
 │
 └── README.md
 ```
-
-*(Contents may vary slightly depending on configuration.)*
 
 ---
 
