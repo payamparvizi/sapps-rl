@@ -32,38 +32,28 @@ They qualitatively compare different policy regularization strategies under the 
 <table>
   <tr>
     <th align="center">PPO</th>
-    <th align="center">PPO + CAPS</th>
-    <th align="center">PPO + SAPPS (Proposed)</th>
+    <th align="center">CAPS</th>
+    <th align="center">SAPPS (Proposed)</th>
   </tr>
   <tr>
     <td align="center">
 
-https://github.com/user-attachments/assets/ae5ec3ec-6156-4999-9488-6d9a8b4d36e1
+https://github.com/user-attachments/assets/dcf9ec1b-819f-44d9-9880-120621b22abd
 
 </td>
     <td align="center">
 
-https://github.com/user-attachments/assets/202e16b8-9344-4743-a2d2-11b102b3cc64
+https://github.com/user-attachments/assets/8d5d55f9-7d96-42c6-8000-89fa2c1ab4c6
 
 </td>
     <td align="center">
 
-https://github.com/user-attachments/assets/e37c76e4-754a-4d86-9ea0-953016177fc4
+https://github.com/user-attachments/assets/0ae71900-ce90-476f-986e-f95c5cf01360
 
 </td>
   </tr>
 </table>
 
-
-
-### PPO
-https://github.com/user-attachments/assets/ae5ec3ec-6156-4999-9488-6d9a8b4d36e1
-
-### CAPS
-https://github.com/user-attachments/assets/202e16b8-9344-4743-a2d2-11b102b3cc64
-
-### SAPPS (Proposed Method)
-https://github.com/user-attachments/assets/e37c76e4-754a-4d86-9ea0-953016177fc4
 
 ---
 
