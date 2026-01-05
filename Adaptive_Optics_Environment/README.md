@@ -86,11 +86,13 @@ pip install -r requirements.txt
 
 ## Running the Environment
 
-To train or evaluate an RL agent in the wavefront sensorless AO environment:
+To train or evaluate an RL agent in the wavefront sensorless adaptive optics (WSL-AO) environment, run:
 
 ```bash
 python run_wslao.py
 ```
+
+### Selecting the atmospheric regime (turbulence drift velocity)
 
 Key configuration parameters—such as atmospheric conditions, turbulence drift velocity, observation dimensions, and action parameterization—are defined within the script and associated configuration files.
 
@@ -131,6 +133,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
