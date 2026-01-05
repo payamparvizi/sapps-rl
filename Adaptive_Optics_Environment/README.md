@@ -82,8 +82,6 @@ It is recommended to use a dedicated Python environment (e.g., `venv` or Conda) 
 pip install -r requirements.txt
 ```
 
-Some dependencies (e.g., optical simulation libraries) may require system-level packages. Please consult the comments in `requirements.txt` if any installation issues arise.
-
 ---
 
 ## Running the Environment
@@ -133,6 +131,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
