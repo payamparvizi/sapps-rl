@@ -41,3 +41,64 @@ sapps-rl/
 │ └── Real-world nano quadcopter hovering experiments
 │
 └── README.md
+
+---
+
+
+Each environment directory is self-contained and includes training and evaluation scripts corresponding to the experiments reported in the paper.
+
+---
+
+## Experimental Domains
+
+### 1. MuJoCo Continuous-Control Benchmarks
+SAPPS is evaluated on standard OpenAI Gymnasium MuJoCo tasks, including:
+- Walker2D
+- HalfCheetah
+- Ant
+- Reacher
+- Swimmer
+
+Across these benchmarks, SAPPS improves policy smoothness while maintaining or improving return.
+
+---
+
+### 2. Real-World Quadcopter Control
+A nano quadcopter hovering task is used to validate real-world applicability. SAPPS demonstrates:
+- reduced control oscillations
+- improved actuator efficiency
+- stable performance under sensor noise and disturbances
+
+---
+
+### 3. Wavefront Sensorless Adaptive Optics
+A highly dynamic optical control problem inspired by satellite-to-ground optical communication. SAPPS is evaluated under:
+- quasi-static atmospheric conditions
+- rapidly changing turbulence with high drift velocities
+
+SAPPS maintains performance where fixed smoothing methods degrade.
+
+---
+
+## Installation
+
+This repository assumes a standard Python-based reinforcement learning stack.
+
+### General Requirements
+- Python ≥ 3.8
+- PyTorch
+- NumPy
+- OpenAI Gymnasium / MuJoCo
+
+Additional dependencies may be required depending on the selected environment and are specified within each subdirectory.
+
+---
+
+## Running Experiments
+
+Each environment directory contains its own training and evaluation scripts.
+
+### Example: MuJoCo
+```bash
+cd MuJoCo_Environments
+python train.py --method sapps
