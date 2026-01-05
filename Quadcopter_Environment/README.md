@@ -125,20 +125,9 @@ Configuration parameters (e.g., target altitude or action range) can also be adj
 
 ---
 
-## Safety Notes
-
-- These experiments involve **real flying hardware**.
-- Always operate in a clear, enclosed area.
-- Use conservative action limits for initial testing.
-- Never deploy untested policies directly on hardware.
-
----
-
-## Reproducibility
-
+***Notes***
 - Each experiment was repeated across multiple flight trials to ensure consistency.
-- Real-world variability (battery levels, sensor drift, etc.) can cause performance differences between runs.
-- We focus on **relative improvements** in control smoothness and stability rather than exact numerical replication of results.
+- Real-world variability can cause performance differences between runs.
 
 ---
 
