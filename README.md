@@ -87,7 +87,7 @@ This repository assumes a standard Python-based reinforcement learning stack.
 - NumPy  
 - OpenAI Gymnasium (with MuJoCo support)
 
-Each environment subdirectory includes its own requirements.txt listing any additional dependencies (e.g., specialized simulation libraries or hardware interface packages).
+Each environment subdirectory includes its own `requirements.txt` listing any additional dependencies (e.g., specialized simulation libraries or hardware interface packages).
 
 ---
 
