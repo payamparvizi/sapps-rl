@@ -30,4 +30,14 @@ SAPPS is compared against:
 ---
 
 ## Repository Structure
-
+sapps-rl/
+├── Adaptive_Optics_Environment/
+│ └── RL environment for wavefront sensorless adaptive optics
+│
+├── MuJoCo_Environments/
+│ └── Standard MuJoCo continuous-control benchmark tasks
+│
+├── Quadcopter_Environment/
+│ └── Real-world nano quadcopter hovering experiments
+│
+└── README.md
