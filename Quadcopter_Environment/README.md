@@ -103,22 +103,6 @@ Please follow the setup steps in that repository before running experiments on r
 
 ---
 
-## Hardware Setup and Verification
-
-Before running any RL experiments, verify the connection to the Crazyflie:
-
-```bash
-cfclient
-```
-
-Ensure that:
-- the Crazyradio PA dongle is plugged in and detected
-- the Crazyflie connects successfully
-- onboard sensor readings update correctly (via the client software)
-
-Also verify that the Flow Deck is attached and functioning. Refer to Bitcraze documentation for detailed setup and troubleshooting.
-
----
 
 ## Running Experiments
 
