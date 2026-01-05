@@ -1,7 +1,7 @@
 # SAPPS-RL
 ## Adaptive Policy Regularization for Smooth Control in Reinforcement Learning
 
-This repository contains the official implementation of State-Adaptive Proportional Policy Smoothing (SAPPS), a policy regularization method designed to produce smooth yet responsive control policies in continuous-control reinforcement learning.
+This repository contains the official implementation of **State-Adaptive Proportional Policy Smoothing (SAPPS)**, a policy regularization method designed to produce **smooth yet responsive control policies** in continuous-control reinforcement learning.
 
 SAPPS suppresses high-frequency oscillations in learned policies without compromising performance, particularly in dynamic environments where rapid adaptation is required.
 
