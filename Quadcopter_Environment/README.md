@@ -85,11 +85,21 @@ Quadcopter_Environment/
 
 It is recommended to use a Python virtual environment for installation.
 
+### Python Dependencies
+
+Install the required Python packages using:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-This environment uses the **Bitcraze Crazyflie Python library (cflib)**. Ensure that the Crazyflie drivers and any required USB radio drivers are installed.
+### Crazyflie Software Dependencies
+
+This environment relies on the **Bitcraze Crazyflie Python library (`cflib`)** and the required USB radio drivers.
+
+Detailed installation instructions for the Crazyflie software dependencies, including driver setup and hardware verification, are provided in the following repository: [https://github.com/payamparvizi/Crazyflie_RL](https://github.com/payamparvizi/Crazyflie_RL)
+
+Please follow the setup steps in that repository before running experiments on real hardware.
 
 ---
 
