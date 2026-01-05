@@ -12,11 +12,12 @@ Experiments are conducted on a **Bitcraze Crazyflie 2.1** nano quadcopter and de
 
 While simulation benchmarks are useful for controlled evaluation, real-world robotic systems introduce additional challenges such as sensor noise, actuator delays, communication latency, and unmodeled dynamics. These effects can significantly amplify high-frequency oscillations in learned policies.
 
-This environment formulates quadcopter hovering as a **continuous-control Markov Decision Process (MDP)** and enables training and deployment of RL policies on physical hardware. It is designed to evaluate SAPPS's impact on:
+This environment supports both **simulation-based training** and **real-world deployment** on a Crazyflie quadcopter. Quadcopter hovering is formulated as a **continuous-control Markov Decision Process (MDP)**, enabling training and deployment of reinforcement learning policies on physical hardware. It is designed to evaluate SAPPS’s impact on:
 
 - control smoothness,
-- actuator efficiency
-- stability during real-world flight
+- actuator efficiency, and
+- stability during real-world flight.
+
 
 ---
 
