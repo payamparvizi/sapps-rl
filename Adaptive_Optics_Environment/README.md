@@ -26,11 +26,7 @@ The focus of this environment is to assess whether **SAPPS** enables **smooth ye
 
 This environment builds on prior research in RL for wavefront sensorless adaptive optics, including an earlier AO-RL simulation framework by the authors (see **Parvizi et al., *Reinforcement Learning Environment for Wavefront Sensorless Adaptive Optics in Single-Mode Fiber Coupled Optical Satellite Communications Downlinks*, Photonics 2023** – [https://doi.org/10.3390/photonics10121371](https://doi.org/10.3390/photonics10121371))
 
-However, the present work differs in key aspects:
-
-- **Learning objectives** – new objectives tailored to adaptive regularization
-- **Control regularization strategy** – introduces the SAPPS method instead of fixed smoothness penalties
-- **Experimental focus** – emphasis on action smoothness under dynamic conditions
+However, the present work differs in its formulation and evaluation focus, introducing state-adaptive policy regularization (SAPPS) and explicitly analyzing action smoothness and control robustness under dynamic atmospheric conditions.
 
 Importantly, this repository does *not* aim to reproduce or extend the Photonics 2023 results. Instead, it reuses a compatible simulation framework as a **controlled and challenging testbed** for evaluating adaptive policy regularization methods.
 
@@ -137,5 +133,6 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
