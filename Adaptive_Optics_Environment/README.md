@@ -12,6 +12,10 @@ The environment is designed to evaluate **policy smoothness and control responsi
 
 Wavefront sensorless adaptive optics aims to correct atmospheric wavefront distortions **without explicit wavefront sensing**, relying instead on low-dimensional photodetector measurements and closed-loop control of a deformable mirror.
 
+<p align="center">
+  <img src="https://github.com/payamparvizi/adaptive_optics_gym/assets/45127690/6bef8b6a-7f15-4633-b44d-8fba1f29a80c" align="center" width="500">
+</p>
+
 This environment formulates the AO control problem as a **continuous-control Markov Decision Process (MDP)** and is used to evaluate reinforcement learning algorithms under conditions where:
 
 - observations are low-dimensional and partially observable,
@@ -200,6 +204,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
