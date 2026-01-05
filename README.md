@@ -18,15 +18,9 @@ A significant challenge in applying reinforcement learning (RL) to continuous-co
 
 ---
 
-## Key Idea
-
-SAPPS method that can be integrated into deep RL algorithms to improve policy smoothness in both static and dynamic continuous-control environments. SAPPS regularizes changes between consecutive actions based on the relative magnitude of variation between temporally consecutive observations, encouraging proportional action responses. This adaptive design penalizes unnecessary action fluctuations while preserving responsiveness to meaningful observation changes.
-
----
-
 ## Method Overview
 
-SAPPS augments the PPO objective with an additional regularization term that relates differences between consecutive actions to differences between consecutive observations. This formulation suppresses high-frequency oscillations while allowing rapid control responses when the environment changes significantly.
+SAPPS method that can be integrated into deep RL algorithms to improve policy smoothness in both static and dynamic continuous-control environments. SAPPS regularizes changes between consecutive actions based on the relative magnitude of variation between temporally consecutive observations, encouraging proportional action responses. This adaptive design penalizes unnecessary action fluctuations while preserving responsiveness to meaningful observation changes.
 
 SAPPS is compared against:
 - Vanilla PPO
