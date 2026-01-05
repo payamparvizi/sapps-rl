@@ -9,8 +9,6 @@ SAPPS suppresses high-frequency oscillations in learned policies **without compr
 📌 **Journal submission**: IEEE Transactions on Automation Science and Engineering (under review)  
 🔗 **Preprint**: https://arxiv.org/abs/XXXX.XXXXX  
 👤 **Authors**: Payam Parvizi, Abhishek Naik, Colin Bellinger, Ross Cheriton, Davide Spinello  
-💻 **Repository**: https://github.com/payamparvizi/sapps-rl
-
 
 ---
 
