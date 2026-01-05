@@ -154,4 +154,4 @@ If you use this environment or experimental setup, please cite:
 
 ## Acknowledgments
 
-This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**. The implementation builds upon the Bitcraze Crazyflie ecosystem and its open-source tools.
+This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**. The implementation builds upon the Bitcraze Crazyflie platform and its open-source software.
