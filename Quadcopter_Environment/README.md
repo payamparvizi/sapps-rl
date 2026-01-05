@@ -35,13 +35,15 @@ The Crazyflie platform is chosen for its widespread use in research and lightwei
 ## Environment Characteristics
 
 - **Observation Space**  
-  Low-dimensional state representation including altitude, vertical velocity, and attitude-related measurements.
+  A low-dimensional state representation consisting of the current altitude and vertical velocity, obtained either from simulated dynamics or from onboard state estimation during real-world operation
 
 - **Action Space**  
-  Continuous control commands corresponding to motor thrust levels.
+  A single continuous control input corresponding to the commanded vertical velocity, bounded within a predefined action range to ensure safe operation.
 
-- **Disturbances**  
-  Sensor noise, actuator delay, communication latency, and external perturbations.
+- **Dynamics**
+The environment supports both:
+- Simulation mode, which models altitude dynamics with actuation lag and additive noise, and
+- Real-hardware mode, which interfaces directly with the Crazyflie flight stack and executes velocity commands through the onboard motion controller.
 
 - **Reward Function**  
   Rewards stable hovering and penalizes excessive action fluctuations.
