@@ -98,7 +98,4 @@ Additional dependencies may be required depending on the selected environment an
 
 Each environment directory contains its own training and evaluation scripts.
 
-### Example: MuJoCo
-```bash
-cd MuJoCo_Environments
-python train.py --method sapps
+Please refer to environment-specific scripts and configuration files for details on hyperparameters and experimental settings.
