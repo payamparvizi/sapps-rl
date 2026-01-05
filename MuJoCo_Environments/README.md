@@ -29,23 +29,23 @@ The following OpenAI Gymnasium MuJoCo tasks are used:
 - **Reacher**
 - **Swimmer**
 
-All environments involve continuous state and action spaces and are evaluated under identical training and evaluation protocols for fair comparison.
+All environments have continuous state and action spaces, and all experiments use identical training and evaluation protocols for fair comparison.
 
 ---
 
 ## Experimental Setup
 
-- **RL Algorithm**: Proximal Policy Optimization (PPO)  
+- **RL Algorithm**: Proximal Policy Optimization (PPO)
 - **Policy Types Compared**:
   - Vanilla PPO
-  - PPO + CAPS (Conditioning for Action Policy Smoothness)
-  - PPO + LipsNet
-  - PPO + SAPPS
+  - CAPS (Conditioning for Action Policy Smoothness)
+  - LipsNet
+    
 - **Evaluation Metrics**:
   - Average episodic return
-  - Policy smoothness metrics based on action variation
+  - Policy smoothness (action variation)
 
-Hyperparameter ranges and evaluation protocols match those reported in the paper.
+Hyperparameter ranges and evaluation procedures match those reported in the paper.
 
 ---
 
@@ -57,7 +57,7 @@ MuJoCo_Environments/
 │   └── Environment-specific configuration files
 │
 ├── train.py
-│   └── Training script for PPO-based methods
+│   └── Training script for PPO variants (with or without SAPPS)
 │
 ├── evaluate.py
 │   └── Evaluation and plotting utilities
@@ -68,47 +68,47 @@ MuJoCo_Environments/
 └── README.md
 ```
 
-*(Directory contents may vary slightly depending on the environment.)*
+*(Contents may vary slightly by task.)*
 
 ---
 
 ## Installation
 
-These environments require MuJoCo and Gymnasium support.
+Ensure that MuJoCo and Gymnasium are installed and configured.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-You must also have a working MuJoCo installation compatible with your operating system. Please refer to the official MuJoCo and Gymnasium documentation for installation instructions.
+A working MuJoCo installation (e.g., MuJoCo 2.x) is required. Refer to the official MuJoCo and Gymnasium documentation for platform-specific installation details.
 
 ---
 
 ## Running Experiments
 
-To train a policy using SAPPS on a MuJoCo environment:
+To train a policy using SAPPS on a MuJoCo task (e.g., Walker2D):
 
 ```bash
 python train.py --env Walker2D --method sapps
 ```
 
-Baseline methods can be selected by changing the `--method` argument.
+Baseline methods can be selected by changing the `--method` argument (e.g., `vanilla`, `caps`, `lipsnet`).
 
-Evaluation scripts are provided to compute performance and smoothness metrics across multiple random seeds.
+The `evaluate.py` script can be used to evaluate trained models and compute performance and smoothness metrics across multiple random seeds.
 
 ---
 
-## Usage Notes
+## Reproducibility
 
 - All experiments are run with multiple random seeds.
-- Results are reported as averages with variability measures.
-- Exact numerical results may vary due to stochastic initialization and simulator differences.
+- Results are reported as averages with variability measures (e.g., standard deviation).
+- Due to stochastic initialization and simulation variability, exact results may differ slightly between runs.
 
 ---
 
 ## Relation to the Paper
 
-The MuJoCo experiments provide controlled benchmarks that isolate the effect of SAPPS on policy smoothness and performance, independent of domain-specific complexities such as optical systems or hardware constraints.
+The MuJoCo experiments serve as controlled benchmarks that isolate the effect of SAPPS on policy smoothness and performance, independent of domain-specific complexities (such as optical system dynamics or hardware constraints).
 
 ---
 
@@ -130,4 +130,4 @@ If you use this code, please cite the associated paper:
 
 ## Acknowledgments
 
-These experiments build upon the MuJoCo physics engine and the OpenAI Gymnasium benchmarking framework.
+This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**. These experiments build upon the MuJoCo physics engine and the OpenAI Gymnasium framework.
