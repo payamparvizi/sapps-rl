@@ -126,7 +126,30 @@ To evaluate SAPPS under different atmospheric dynamics, select the appropriate p
 
 ### Selecting the Policy Regularization Method
 
-.....
+The WSL-AO environment supports multiple policy regularization methods through a command-line argument. The selected option determines both the `policy regularization strategy`.
+
+#### Policy selection argument
+
+The regularization method is selected using:
+
+```bash
+--regularization_case
+```
+
+Available options are:
+- `standard_PPO`: Vanilla PPO without policy smoothing
+- `PPO_CAPS`: PPO with **Conditioning for Action Policy Smoothness (CAPS)**
+- `PPO_SAPPS`: PPO with **State-Adaptive Proportional Policy Smoothing (SAPPS)** (proposed method)
+- `PPO_LipsNet`: PPO with a LipsNet-based policy architecture
+
+By default:
+```bash
+--regularization_case standard_PPO
+```
+
+#### Neural network architecture
+- `standard_PPO`, `PPO_CAPS`, and `PPO_SAPPS` use a **standard MLP policy network**.
+- `PPO_LipsNet` replaces the MLP with a **LipsNet architecture**.
 
 
 ---
@@ -164,6 +187,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
