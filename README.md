@@ -70,7 +70,7 @@ SAPPS is evaluated on standard OpenAI Gymnasium MuJoCo tasks, including:
 Across these benchmarks, SAPPS improves policy smoothness while maintaining or improving task return.
 
 ### 2. Real-World Quadcopter Control
-A nano quadcopter hovering task is used to validate real-world applicability. SAPPS demonstrates reduced control oscillations, improved actuator efficiency, and stable performance under sensor noise and external disturbances.
+A nano quadcopter hovering task is used to validate real-world applicability. SAPPS demonstrates reduced control oscillations, improved actuator efficiency, and stable performance under sensor noise and disturbances.
 
 ### 3. Wavefront Sensorless Adaptive Optics
 A highly dynamic optical control problem inspired by satellite-to-ground optical communication. SAPPS is evaluated under quasi-static atmospheric conditions and rapidly changing turbulence (high drift velocities), maintaining performance where fixed smoothing methods significantly degrade.
