@@ -113,14 +113,14 @@ All results reported in the paper are averaged over multiple random seeds, and h
 If you use this code in your research, please cite:
 
 ```bibtex
-@misc{parvizi20XXsapps,
-  title         = {Adaptive Policy Regularization for Smooth Control in Reinforcement Learning},
-  author        = {Payam Parvizi and Abhishek Naik and Colin Bellinger and Ross Cheriton and Davide Spinello},
-  year          = {20XX},
-  eprint        = {XXX},
-  archivePrefix = {arXiv},
-  primaryClass  = {XXX},
-  url           = {https://arxiv.org/abs/XXX}
+@misc{parvizi20XXadaptivepolicyregularization,
+  title={Adaptive Policy Regularization for Smooth Control in Reinforcement Learning},
+  author={Payam Parvizi and Abhishek Naik and Colin Bellinger and Ross Cheriton and Davide Spinello},
+  year={20XX},
+  eprint={XXX},
+  archivePrefix={arXiv},
+  primaryClass={XXX},
+  url={https://arxiv.org/abs/XXX},
 }
 ```
 
