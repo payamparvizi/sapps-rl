@@ -1,27 +1,27 @@
 # MuJoCo Continuous-Control Environments
 
-This directory contains the **MuJoCo continuous-control benchmark environments** used to evaluate the effectiveness of **State-Adaptive Proportional Policy Smoothing (SAPPS)** in the paper:
+This directory contains the **MuJoCo continuous-control benchmark environments** used to evaluate **State-Adaptive Proportional Policy Smoothing (SAPPS)** in the paper:
 
-**Adaptive Policy Regularization for Smooth Control in Reinforcement Learning**
+*Adaptive Policy Regularization for Smooth Control in Reinforcement Learning*
 
-These environments serve as standardized benchmarks to assess policy smoothness and task performance in simulated robotic control tasks.
+These tasks serve as standardized benchmarks to assess policy smoothness and overall performance in simulated robotic control scenarios.
 
 ---
 
 ## Overview
 
-MuJoCo environments are widely used benchmarks for evaluating reinforcement learning algorithms in continuous-control settings. They provide well-understood dynamics and standardized evaluation protocols, making them suitable for isolating the effects of policy regularization methods.
+MuJoCo environments are widely used for evaluating reinforcement learning algorithms in continuous control settings. They provide well-understood dynamics and standardized evaluation protocols, making them ideal for isolating the effects of a policy regularization method.
 
-In this work, MuJoCo tasks are used to demonstrate that SAPPS:
-- improves policy smoothness,
-- suppresses high-frequency action oscillations, and
-- maintains or improves task performance relative to baseline methods.
+In these benchmarks, SAPPS:
+- improves policy smoothness
+- suppresses high-frequency action oscillations
+- maintains or improves task performance relative to baseline methods
 
 ---
 
 ## Environments Included
 
-The following OpenAI Gymnasium MuJoCo environments are used:
+The following OpenAI Gymnasium MuJoCo tasks are used:
 
 - **Walker2D**
 - **HalfCheetah**
