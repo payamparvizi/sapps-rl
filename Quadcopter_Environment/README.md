@@ -46,7 +46,7 @@ The Crazyflie platform is chosen for its widespread use in research and lightwei
   - Real-hardware mode, which interfaces directly with the Crazyflie flight stack and executes velocity commands through the onboard motion controller.
 
 - **Reward Function**  
-  Rewards stable hovering and penalizes excessive action fluctuations.
+  The reward is primarily based on the absolute altitude error relative to the target altitude.
 
 This setup emphasizes **smooth control, robustness,** and **hardware safety**.
 
