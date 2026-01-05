@@ -30,10 +30,7 @@ The following videos present real-world quadcopter hovering experiments conducte
 They qualitatively compare different policy regularization strategies under the same hardware conditions.
 
 ### PPO
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/34c3c284-85a1-4c2d-aa49-d89e5213f54f" align="center" width="300">
-</p>
-
+https://github.com/user-attachments/assets/ae5ec3ec-6156-4999-9488-6d9a8b4d36e1
 
 ### PPO + CAPS
 [Video link]
