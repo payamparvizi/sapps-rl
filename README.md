@@ -28,6 +28,10 @@ Results from simulation and hardware experiments demonstrate that SAPPS produces
 
 SAPPS is a general policy regularization technique that can be integrated into deep RL algorithms to improve policy smoothness in both static and dynamic continuous-control settings. Rather than directly penalizing action magnitude, SAPPS regularizes the change between consecutive actions based on the relative change between consecutive observations.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3b4df3bc-2d37-49bb-ba33-a41ac0952c8d" align="center" width="400">
+</p>
+
 This adaptive formulation:
 - penalizes unnecessary action fluctuations when state changes are small
 - preserves responsiveness when large observation changes require rapid control adaptation
