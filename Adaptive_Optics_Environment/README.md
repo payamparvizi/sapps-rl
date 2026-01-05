@@ -39,18 +39,18 @@ Importantly, this repository does *not* aim to reproduce or extend the Photonics
 ## Environment Characteristics
 
 - **Observation Space**  
-  Low-dimensional photodetector measurements derived from the focal plane intensity distribution (e.g., quadrant or coarse pixel arrays).
+  Low-dimensional photodetector measurements derived from the focal-plane intensity distribution (e.g., quadrant or coarse pixel array).
 
 - **Action Space**  
   Continuous control commands applied to a deformable mirror, parameterized either directly in actuator space or via low-order modal representations.
 
 - **Dynamics**  
-  Atmospheric turbulence modeled using phase screens with configurable strength and drift velocity, enabling quasi-static to rapidly varying regimes.
+  Atmospheric turbulence modeled using phase screens with configurable strength and drift velocity, spanning quasi-static to rapidly varying regimes.
 
 - **Reward Function**  
-  Optical performance metrics related to coupling efficiency or Strehl-like measures.
+  Optical performance metrics related to coupling efficiency or a Strehl ratio proxy.
 
-This design emphasizes **low latency**, **partial observability**, and **fast temporal dynamics**, making it particularly sensitive to high-frequency control oscillations.
+This design emphasizes **low latency, partial observability**, and **fast temporal dynamics**, making it particularly sensitive to high-frequency control oscillations.
 
 ---
 
@@ -137,6 +137,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and the **National Research Council Canada (NRC)**.
+
 
 
 
