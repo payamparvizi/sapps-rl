@@ -8,7 +8,7 @@ This directory contains the **MuJoCo continuous-control benchmark environments**
 These tasks serve as standardized benchmarks to assess policy smoothness and overall performance in simulated robotic control scenarios.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/baa34bcb-3b1e-4fb0-9dd0-581f4f2750c4" align="center" width="300">
+  <img src="https://github.com/user-attachments/assets/baa34bcb-3b1e-4fb0-9dd0-581f4f2750c4" align="center" width="600">
 </p>
 
 ---
