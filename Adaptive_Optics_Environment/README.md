@@ -48,6 +48,9 @@ Importantly, this repository does *not* aim to reproduce or extend the Photonics
 
 This design emphasizes **low latency, partial observability**, and **fast temporal dynamics**, making it particularly sensitive to high-frequency control oscillations.
 
+The environment uses a combination of internally defined physical simulation parameters and externally configurable experiment parameters. Core optical and atmospheric simulation parameters are initialized within the environment implementation to ensure physical consistency, while a subset of parameters (e.g., atmospheric regime, turbulence strength, and control dimensionality) is exposed through the argument files for controlled experimentation.
+
+
 ---
 
 ## Directory Structure
@@ -202,3 +205,4 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
