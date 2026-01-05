@@ -104,7 +104,13 @@ utils/arguments/
 └── arguments_v_500mps.py
 ```
 
-Key configuration parameters—such as atmospheric conditions, turbulence drift velocity, observation dimensions, and action parameterization—are defined within the script and associated configuration files.
+Each `arguments_v_*` file defines the full experimental configuration for a specific atmospheric turbulence drift velocity, including environment parameters and training hyperparameters.
+
+By default, `run_wslao.py` loads its configuration via:
+
+```bash
+from utils.arguments.arguments import get_args
+```
 
 ---
 
@@ -143,6 +149,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
