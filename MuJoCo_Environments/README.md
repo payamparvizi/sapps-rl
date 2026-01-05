@@ -85,25 +85,68 @@ A working MuJoCo installation (e.g., MuJoCo 2.1) is required. Refer to the offic
 
 ---
 
-## Running Experiments
+## Running the Environment
 
-To train a policy using SAPPS on a MuJoCo task (e.g., Walker2D):
+To train or evaluate an RL agent on the MuJoCo continuous-control benchmarks, run:
 
 ```bash
-python train.py --env Walker2D --method sapps
+python run_mujoco.py
 ```
 
-Baseline methods can be selected by changing the `--method` argument (e.g., `vanilla`, `caps`, `lipsnet`).
+### Selecting the MuJoCo environment
 
-The `evaluate.py` script can be used to evaluate trained models and compute performance and smoothness metrics across multiple random seeds.
+MuJoCo-specific experiment configurations are defined in:
 
----
+```
+utils/arguments/
+├── arguments.py
+├── arguments_walker2d.py
+├── arguments_halfcheetah.py
+├── arguments_ant.py
+├── arguments_reacher.py
+└── arguments_swimmer.py
+```
 
-## Reproducibility
+Each `arguments_<env>.py` file defines the full experimental configuration for a specific MuJoCo task, including environment settings and training hyperparameters.
 
-- All experiments are run with multiple random seeds.
-- Results are reported as averages with variability measures (e.g., standard deviation).
-- Due to stochastic initialization and simulation variability, exact results may differ slightly between runs.
+By default, `run_mujoco.py` loads its configuration via:
+
+```
+from utils.arguments.arguments import get_args
+```
+
+This default configuration corresponds to the Ant environment, as used in the main MuJoCo evaluations reported in the paper.
+
+To run experiments on a different MuJoCo task, select the appropriate preset by modifying the configuration selection inside `utils/arguments/arguments.py`, or by directly importing the desired preset module, for example:
+- `arguments_walker2d.py` — Walker2D-v4
+- `arguments_halfcheetah.py` — HalfCheetah-v4
+- `arguments_ant.py` — Ant-v4
+- `arguments_reacher.py` — Reacher-v4
+- `arguments_swimmer.py` — Swimmer-v4
+
+### Selecting the Policy Regularization Method
+
+The MuJoCo experiments support multiple policy regularization methods through a command-line argument. The selected option determines the **policy regularization strategy** used during training.
+
+#### Policy selection argument
+
+The regularization method is selected using:
+
+```bash
+--regularization_case
+```
+
+Available options are:
+- `standard_PPO`: Vanilla PPO without policy smoothing
+- `PPO_CAPS`: PPO with **Conditioning for Action Policy Smoothness (CAPS)**
+- `PPO_SAPPS`: PPO with **State-Adaptive Proportional Policy Smoothing (SAPPS)** (proposed method)
+
+By default:
+```bash
+--regularization_case standard_PPO
+```
+
+All methods are evaluated using the same network architecture and training protocol, ensuring that performance differences are attributable to the regularization strategy rather than architectural changes.
 
 ---
 
