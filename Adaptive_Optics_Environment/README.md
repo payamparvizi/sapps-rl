@@ -59,19 +59,19 @@ This design emphasizes **low latency, partial observability**, and **fast tempor
 ```
 Adaptive_Optics_Environment/
 ├── gym_AO/
-│   └── Custom Gymnasium-compatible AO environment
+│   └── Gymnasium-compatible AO environment
 │
 ├── packages/
-│   └── Optical modeling and environment dependencies
+│   └── Optical modeling and simulation utilities
 │
 ├── utils/
-│   └── Helper functions for simulation and evaluation
+│   └── Helper functions for environment simulation and evaluation
 │
 ├── run_wslao.py
 │   └── Entry point for training and evaluation
 │
 ├── requirements.txt
-│   └── Environment-specific dependencies
+│   └── Environment-specific Python dependencies
 │
 └── README.md
 ```
@@ -80,13 +80,13 @@ Adaptive_Optics_Environment/
 
 ## Installation
 
-It is recommended to use a **separate virtual environment** for this module.
+It is recommended to use a dedicated Python environment (e.g., `venv` or Conda) for this module.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Some dependencies (e.g., optical simulation libraries) may require system-level packages. Please refer to the comments in `requirements.txt` if installation issues arise.
+Some dependencies (e.g., optical simulation libraries) may require system-level packages. Please consult the comments in `requirements.txt` if any installation issues arise.
 
 ---
 
@@ -98,23 +98,23 @@ To train or evaluate an RL agent in the wavefront sensorless AO environment:
 python run_wslao.py
 ```
 
-Key configuration parameters—such as atmospheric regime, turbulence velocity, observation dimension, and action parameterization—are defined within the script and associated configuration files.
+Key configuration parameters—such as atmospheric conditions, turbulence drift velocity, observation dimensions, and action parameterization—are defined within the script and associated configuration files.
 
 ---
 
-## Usage Notes
+## Reproducibility
 
-- This environment is intended for **research and comparative evaluation purposes**.
+- This environment is intended for **research and comparative evaluation** purposes.
 - Exact numerical reproducibility is not expected due to stochastic turbulence generation.
-- Emphasis is placed on **relative performance and smoothness comparisons** between methods rather than absolute optical metrics.
+- Emphasis is on **relative performance** and smoothness comparisons rather than absolute optical metrics.
 
 ---
 
 ## Relation to the Paper
 
-The adaptive optics experiments reported in the paper use this environment to demonstrate that **state-adaptive policy regularization** improves control smoothness and robustness in highly dynamic, partially observed systems.
+The adaptive optics experiments in the paper use this environment to show that **state-adaptive policy regularization (SAPPS)** improves control smoothness and robustness in a highly dynamic, partially observed system.
 
-The environment is **not required** to apply SAPPS in other domains such as MuJoCo benchmarks or robotic control tasks.
+*Note:* This environment is **not required** to apply SAPPS in other domains (e.g., MuJoCo or robotic control).
 
 ---
 
@@ -136,10 +136,4 @@ If you use this environment or build upon it, please cite the associated paper:
 
 ## Acknowledgments
 
-This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and the **National Research Council Canada (NRC)**.
-
-
-
-
-
-
+This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
