@@ -7,6 +7,10 @@ This directory contains the **real-world quadcopter control environment** used t
 
 Experiments are conducted on a **Bitcraze Crazyflie 2.1** nano quadcopter and demonstrate the effectiveness of SAPPS in producing **smooth, stable, and hardware-safe** control policies under real-world noise, delays, and disturbances.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e15c1612-ea9d-4a60-ac8f-029d1f8b9d1a" align="center" width="300">
+</p>
+
 ---
 
 ## Overview
