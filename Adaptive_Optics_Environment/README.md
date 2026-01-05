@@ -172,11 +172,8 @@ Default:
 
 ---
 
-## Reproducibility
+Exact numerical reproducibility is not expected due to stochastic turbulence generation.
 
-- This environment is intended for **research and comparative evaluation** purposes.
-- Exact numerical reproducibility is not expected due to stochastic turbulence generation.
-- Emphasis is on **relative performance** and smoothness comparisons rather than absolute optical metrics.
 
 ---
 
@@ -205,4 +202,5 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
