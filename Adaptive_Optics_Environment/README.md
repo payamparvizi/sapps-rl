@@ -61,7 +61,7 @@ Adaptive_Optics_Environment/
 │   └── Auxiliary packages for reinforcement learning and baseline methods
 │
 ├── utils/
-│   └── Helper functions for environment simulation and evaluation
+│   └── Experiment configuration, network definitions, and supporting utilities
 │
 ├── run_wslao.py
 │   └── Entry point for training and evaluation
@@ -133,6 +133,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
