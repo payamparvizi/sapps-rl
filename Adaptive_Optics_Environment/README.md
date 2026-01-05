@@ -18,16 +18,13 @@ This environment formulates the AO control problem as a **continuous-control Mar
 - dynamics can change rapidly due to atmospheric turbulence, and
 - excessive control oscillations directly degrade optical performance.
 
-The focus of this environment within the current repository is to assess whether **SAPPS** enables **smooth yet responsive control** in such challenging regimes.
+The focus of this environment is to assess whether **SAPPS** enables **smooth yet responsive control under** such challenging conditions.
 
 ---
 
 ## Relation to Prior Work
 
-This environment builds conceptually on prior work in reinforcement learning for wavefront sensorless adaptive optics, including earlier AO-RL simulation frameworks developed by the authors. In particular, related background and environment design details can be found in:
-
-**Parvizi et al., _Reinforcement Learning Environment for Wavefront Sensorless Adaptive Optics in Single-Mode Fiber Coupled Optical Satellite Communications Downlinks_, Photonics (2023)**  
-🔗 https://doi.org/10.3390/photonics10121371
+This environment builds on prior research in RL for wavefront sensorless adaptive optics, including an earlier AO-RL simulation framework by the authors (see **Parvizi et al., *Reinforcement Learning Environment for Wavefront Sensorless Adaptive Optics in Single-Mode Fiber Coupled Optical Satellite Communications Downlinks*, Photonics 2023** – doi:10.3390/photonics10121371).
 
 However:
 
@@ -142,6 +139,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and the **National Research Council Canada (NRC)**.
+
 
 
 
