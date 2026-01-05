@@ -40,14 +40,14 @@ The Crazyflie platform is chosen for its widespread use in research and lightwei
 - **Action Space**  
   A single continuous control input corresponding to the commanded vertical velocity, bounded within a predefined action range to ensure safe operation.
 
+- **Reward Function**  
+  The reward is primarily based on the absolute altitude error relative to the target altitude.
+
 - **Dynamics**
   The environment supports both:
   - Simulation mode, which models altitude dynamics with actuation lag and additive noise, and
   - Real-hardware mode, which interfaces directly with the Crazyflie flight stack and executes velocity commands through the onboard motion controller.
-
-- **Reward Function**  
-  The reward is primarily based on the absolute altitude error relative to the target altitude.
-
+    
 - **Safety and Termination Conditions**  
   Episodes terminate upon exceeding predefined altitude limits, violating roll or pitch safety bounds (real hardware), or reaching the maximum number of steps. In real-hardware mode, emergency stop and landing procedures are automatically triggered to ensure safe operation.
   
