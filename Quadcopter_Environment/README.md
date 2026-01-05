@@ -29,6 +29,26 @@ This environment supports both **simulation-based training** and **real-world de
 The following videos present real-world quadcopter hovering experiments conducted on a **Crazyflie 2.1** platform.  
 They qualitatively compare different policy regularization strategies under the same hardware conditions.
 
+<table>
+  <tr>
+    <th align="center">PPO</th>
+    <th align="center">PPO + CAPS</th>
+    <th align="center">PPO + SAPPS (Proposed)</th>
+  </tr>
+  <tr>
+    <td align="center">
+      https://github.com/user-attachments/assets/ae5ec3ec-6156-4999-9488-6d9a8b4d36e1
+    </td>
+    <td align="center">
+      https://github.com/user-attachments/assets/202e16b8-9344-4743-a2d2-11b102b3cc64
+    </td>
+    <td align="center">
+      https://github.com/user-attachments/assets/e37c76e4-754a-4d86-9ea0-953016177fc4
+    </td>
+  </tr>
+</table>
+
+
 ### PPO
 https://github.com/user-attachments/assets/ae5ec3ec-6156-4999-9488-6d9a8b4d36e1
 
