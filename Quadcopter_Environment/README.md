@@ -44,6 +44,7 @@ The Crazyflie platform is chosen for its widespread use in research and lightwei
   The reward is primarily based on the absolute altitude error relative to the target altitude.
 
 - **Dynamics**
+  
   The environment supports both:
   - Simulation mode, which models altitude dynamics with actuation lag and additive noise, and
   - Real-hardware mode, which interfaces directly with the Crazyflie flight stack and executes velocity commands through the onboard motion controller.
