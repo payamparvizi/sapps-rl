@@ -160,7 +160,7 @@ When using `PPO_LipsNet`, the type of Lipschitz constraint is controlled by:
 ```
 
 - `--global_lips 1` — **LipsNet-G** (global Lipschitz constraint)
-- `--global_lips 0` — **LipsNet-L** (Local Lipschitz constraint)
+- `--global_lips 0` — **LipsNet-L** (local Lipschitz constraint)
 
 Default:
 ```bash
@@ -202,6 +202,7 @@ If you use this environment or build upon it, please cite the associated paper:
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
