@@ -28,7 +28,7 @@ This environment supports both **simulation-based training** and **real-world de
 - **Sensor Deck**: Flow Deck v2 
 - **Task**: Altitude stabilization (hovering)
 
-The Crazyflie platform is chosen for its widespread use in research, lightweight design, and sensitivity to control oscillations.
+The Crazyflie platform is chosen for its widespread use in research and lightweight design.
 
 ---
 
