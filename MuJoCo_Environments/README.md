@@ -169,19 +169,11 @@ The MuJoCo experiments provide standardized continuous-control benchmarks used t
 
 ## Citation
 
-If you use this code, please cite the associated paper:
+If you use this code in your research, please cite the associated paper.
 
-```bibtex
-@misc{parvizi20XXadaptivepolicyregularization,
-  title={Adaptive Policy Regularization for Smooth Control in Reinforcement Learning},
-  author={Payam Parvizi and Abhishek Naik and Colin Bellinger and Ross Cheriton and Davide Spinello},
-  year={20XX},
-  eprint={XXX},
-  archivePrefix={arXiv},
-  primaryClass={XXX},
-  url={https://arxiv.org/abs/XXX},
-}
-```
+🔗 **Preprint**: arXiv (forthcoming)
+
+A full BibTeX entry and `CITATION.cff` file will be added upon publication.
 
 ---
 
