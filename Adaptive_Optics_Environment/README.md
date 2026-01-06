@@ -189,25 +189,18 @@ The adaptive optics experiments in the paper use this environment to show that *
 
 ## Citation
 
-If you use this environment or build upon it, please cite the associated paper:
+If you use this code in your research, please cite the associated paper.
 
-```bibtex
-@misc{parvizi20XXadaptivepolicyregularization,
-  title={Adaptive Policy Regularization for Smooth Control in Reinforcement Learning},
-  author={Payam Parvizi and Abhishek Naik and Colin Bellinger and Ross Cheriton and Davide Spinello},
-  year={20XX},
-  eprint={XXX},
-  archivePrefix={arXiv},
-  primaryClass={XXX},
-  url={https://arxiv.org/abs/XXX},
-}
-```
+🔗 **Preprint**: arXiv (forthcoming)
+
+A full BibTeX entry and `CITATION.cff` file will be added upon publication.
 
 ---
 
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
