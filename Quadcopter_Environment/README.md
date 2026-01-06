@@ -169,6 +169,13 @@ Configuration parameters (e.g., target altitude or action range) can also be adj
 
 ---
 
+## Reproducibility
+
+Due to real-world hardware effects (sensor noise, timing jitter, communication delays, and unmodeled disturbances), exact trajectory-level reproducibility is not guaranteed even with fixed random seeds. Results reported in the paper are aggregated over multiple runs.
+
+
+---
+
 ## Relation to the Paper
 
 The quadcopter experiments serve as a **hardware validation** of SAPPS, demonstrating that the method achieves smoother control and improved stability in a physical system beyond what is observed in simulation benchmarks.

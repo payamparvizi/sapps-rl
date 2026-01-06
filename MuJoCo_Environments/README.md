@@ -155,6 +155,12 @@ All methods are evaluated using the same network architecture and training proto
 
 ---
 
+## Reproducibility
+
+Due to inherent nondeterminism in GPU execution and environment physics, exact numerical reproducibility is not guaranteed across runs, even with fixed random seeds; reported results are averaged over multiple seeds as described in the paper.
+
+---
+
 ## Relation to the Paper
 
 The MuJoCo experiments provide standardized continuous-control benchmarks used to quantitatively compare SAPPS against baseline policy regularization methods in terms of both task performance and action smoothness.
