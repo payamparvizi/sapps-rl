@@ -155,7 +155,7 @@ A `CITATION.cff` file will be added upon publication.
 
 ## License
 
-This repository will be released under a permissive open-source license (e.g., MIT or BSD-3-Clause) upon publication.
+This project is released under the MIT License. See the LICENSE file for details.
 
 ---
 
