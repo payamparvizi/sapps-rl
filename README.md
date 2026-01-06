@@ -115,6 +115,7 @@ pip install -r requirements.txt
 python run_mujoco.py \
   --regularization_case PPO_SAPPS \
   --seed 0
+```
 
 By default, this command trains on the Ant-v4 environment using the hyperparameters reported in the paper.
 
