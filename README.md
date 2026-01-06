@@ -7,7 +7,7 @@ SAPPS suppresses high-frequency oscillations in learned policies **without compr
 
 📄 **Paper**: *Adaptive Policy Regularization for Smooth Control in Reinforcement Learning*  
 📌 **Journal submission**: IEEE Transactions on Automation Science and Engineering (under review)  
-🔗 **Preprint**: https://arxiv.org/abs/XXXX.XXXXX  
+🔗 **Preprint**: arXiv link to be added upon submission
 👤 **Authors**: [Payam Parvizi](https://www.linkedin.com/in/payamparvizi/), Abhishek Naik, Colin Bellinger, Ross Cheriton, Davide Spinello  
 
 ---
@@ -95,6 +95,28 @@ All experiments are implemented in Python and use standard deep reinforcement le
 - tianshou (training framework and rollout collection)
 
 Each environment subdirectory includes its own `requirements.txt` listing any additional dependencies (e.g., specialized simulation libraries or hardware interface packages).
+
+---
+
+## Quick Start (Minimal Example)
+
+Below is a minimal example to train a SAPPS-regularized PPO policy on a MuJoCo task.
+
+```bash
+# 1. Create and activate a virtual environment
+python -m venv sapps-env
+source sapps-env/bin/activate  # Windows: sapps-env\Scripts\activate
+
+# 2. Install dependencies for MuJoCo experiments
+cd MuJoCo_Environments
+pip install -r requirements.txt
+
+# 3. Run a minimal training example (default environment: Ant-v4)
+python run_mujoco.py \
+  --regularization_case PPO_SAPPS \
+  --seed 0
+
+By default, this command trains on the Ant-v4 environment using the hyperparameters reported in the paper.
 
 ---
 
