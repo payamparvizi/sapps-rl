@@ -8,6 +8,7 @@ SAPPS suppresses high-frequency oscillations in learned policies **without compr
 📄 **Paper**: *Adaptive Policy Regularization for Smooth Control in Reinforcement Learning*  
 📌 **Journal submission**: IEEE Transactions on Automation Science and Engineering (under review)  
 🔗 **Preprint**: arXiv link to be added upon submission
+
 👤 **Authors**: [Payam Parvizi](https://www.linkedin.com/in/payamparvizi/), Abhishek Naik, Colin Bellinger, Ross Cheriton, Davide Spinello
 
 ---
