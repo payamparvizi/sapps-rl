@@ -46,6 +46,7 @@ SAPPS is implemented within **Proximal Policy Optimization (PPO)** and compared 
 
 ```
 sapps-rl/
+│
 ├── Adaptive_Optics_Environment/
 │   └── Wavefront sensorless adaptive optics environment  
 │       📄 [README](Adaptive_Optics_Environment/README.md)
