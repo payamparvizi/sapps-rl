@@ -55,24 +55,15 @@ Hyperparameter ranges and evaluation procedures match those reported in the pape
 
 ---
 
----
+## Key Results
 
-## Key Results on MuJoCo Benchmarks
+The plots below summarize performance and smoothness on standard MuJoCo continuous-control tasks for **PPO**, **CAPS**, and **SAPPS**, evaluated over **20 random seeds per method**.
 
-Across standard MuJoCo continuous-control tasks (Walker2D, Reacher, HalfCheetah, Swimmer, and Ant), SAPPS consistently improves action smoothness while maintaining or improving task performance relative to baseline methods.
-
-The figure below compares:
-- **Average episodic return** across training (top row), and
-- **Action volatility** \(V_m\) as a measure of policy smoothness (bottom row),
-
-for **standard PPO**, **PPO+CAPS**, and **PPO+SAPPS**, evaluated over **20 random seeds per method**.
+Across all environments, SAPPS achieves **competitive returns** while providing **substantial reductions in action volatility relative to PPO**. Compared to CAPS, both return and smoothness trends are **environment-dependent**, with SAPPS and CAPS exhibiting closely matched performance and alternating advantages across different tasks.
 
 <p align="center">
   <img src="PATH_TO_FIGURE" width="900">
 </p>
-
-Across all environments, PPO+SAPPS achieves comparable or higher returns than PPO and PPO+CAPS, while consistently yielding lower action volatility, indicating smoother control policies without sacrificing task performance.
-
 
 ---
 
