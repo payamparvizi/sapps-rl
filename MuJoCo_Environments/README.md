@@ -36,6 +36,8 @@ The following OpenAI Gymnasium MuJoCo tasks are used:
 
 All environments have continuous state and action spaces, and all experiments use identical training and evaluation protocols for fair comparison.
 
+*Note:* The diagnostic experiment in the paper is conducted on a continuing version of the Reacher task, whose implementation is straightforward and closely follows that in [this repository](https://github.com/abhisheknaik96/csuite/blob/continuing_mujoco/csuite/environments/mujoco_continuing/envs_all.py#L116).
+
 ---
 
 ## Experimental Setup
