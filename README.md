@@ -55,16 +55,11 @@ sapps-rl/
 
 Each environment directory is self-contained and includes training and evaluation scripts corresponding to the experiments reported in the paper.
 
-### Environment Documentation
+Detailed instructions are provided in the environment-specific READMEs:
 
-- 🔭 **Adaptive Optics Environment**  
-  👉 [Adaptive_Optics_Environment/README.md](Adaptive_Optics_Environment/README.md)
-
-- 🧪 **MuJoCo Continuous-Control Environments**  
-  👉 [MuJoCo_Environments/README.md](MuJoCo_Environments/README.md)
-
-- 🚁 **Quadcopter Environment (Real Hardware)**  
-  👉 [Quadcopter_Environment/README.md](Quadcopter_Environment/README.md)
+- 🔭 **Adaptive Optics Environment** → [Adaptive_Optics_Environment/README.md](Adaptive_Optics_Environment/README.md)
+- 🧪 **MuJoCo Continuous-Control Environments** → [MuJoCo_Environments/README.md](MuJoCo_Environments/README.md)
+- 🚁 **Quadcopter Environment (Real Hardware)** → [Quadcopter_Environment/README.md](Quadcopter_Environment/README.md)
 
 ---
 
