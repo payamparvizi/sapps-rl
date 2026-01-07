@@ -58,7 +58,7 @@ sapps-rl/
 │   └── Real-world nano quadcopter hovering experiments  
 │       📄 [README](Quadcopter_Environment/README.md)
 │ 
-└── README.md
+└── 📄 README.md
 ```
 
 Each environment directory is self-contained and includes training and evaluation scripts corresponding to the experiments reported in the paper.
