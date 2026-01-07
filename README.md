@@ -48,18 +48,9 @@ SAPPS is implemented within **Proximal Policy Optimization (PPO)** and compared 
 sapps-rl/
 │
 ├── Adaptive_Optics_Environment/
-│   └── Wavefront sensorless adaptive optics environment  
-│       📄 [README](Adaptive_Optics_Environment/README.md)
-│ 
 ├── MuJoCo_Environments/
-│   └── Standard MuJoCo continuous-control benchmark tasks  
-│       📄 [README](MuJoCo_Environments/README.md)
-│ 
 ├── Quadcopter_Environment/
-│   └── Real-world nano quadcopter hovering experiments  
-│       📄 [README](Quadcopter_Environment/README.md)
-│ 
-└── 📄 README.md
+└── README.md
 ```
 
 Each environment directory is self-contained and includes training and evaluation scripts corresponding to the experiments reported in the paper.
