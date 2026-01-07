@@ -72,6 +72,8 @@ SAPPS is evaluated on standard OpenAI Gymnasium MuJoCo tasks, including:
 - Reacher  
 - Swimmer  
 
+The diagnostic experiment in the paper is conducted on a continuing version of the Reacher task, whose implementation is straightforward and closely follows the version [in this repository](https://github.com/abhisheknaik96/csuite/blob/continuing_mujoco/csuite/environments/mujoco_continuing/envs_all.py#L116).
+
 Across these benchmarks, SAPPS improves policy smoothness while maintaining or improving task return.
 
 ### 2. Real-World Quadcopter Control
