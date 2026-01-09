@@ -40,7 +40,7 @@ Overall, the results indicate that **SAPPS** balances smoothness and responsiven
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/fded436b-ae81-43ee-86d2-64890e190b67" width="1100">
-</p
+</p>
 
 ---
 
@@ -216,6 +216,7 @@ A full BibTeX entry and `CITATION.cff` file will be added upon publication.
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
