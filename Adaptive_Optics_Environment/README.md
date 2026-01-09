@@ -32,11 +32,11 @@ The focus of this environment is to assess whether **SAPPS** enables **smooth ye
 
 The results below summarize fiber coupling efficiency and action smoothness for **PPO**, **CAPS**, **LipsNet**, and **SAPPS (proposed method)** across adaptive optics scenarios with increasing atmospheric drift velocity.
 
-At low drift velocity (5 m/s), all policy-regularization methods outperform PPO in both coupling efficiency and smoothness, with SAPPS and CAPS exhibiting closely matched performance, consistent with the assumption that temporally consecutive observations change slowly in this regime.
+At low drift velocity (5 m/s), all policy-regularization methods improve smoothness relative to PPO, and CAPS achieves the lowest action fluctuation. Coupling efficiency is comparable across regularized methods, with CAPS and LipsNet slightly outperforming SAPPS and PPO, consistent with slowly varying dynamics where restricting action changes does not limit responsiveness.
 
-As drift velocity increases (50 m/s and 500 m/s), differences between consecutive observations become more pronounced, and SAPPS consistently achieves higher average coupling efficiency while maintaining low action fluctuation relative to CAPS, LipsNet, and PPO. In these highly dynamic settings, CAPS exhibits reduced coupling efficiency despite strong smoothness, indicating that restricting action changes without accounting for observation variation can limit responsiveness.
+As drift velocity increases (50 m/s and 500 m/s), differences between consecutive observations become more pronounced, and SAPPS achieves the highest and maintains average coupling efficiency while maintaining low action fluctuation relative to CAPS, LipsNet, and PPO. In these highly dynamic settings, CAPS remains very smooth but exhibits reduced coupling efficiency, indicating that penalizing action changes without accounting for observation variation can hinder responsiveness.
 
-Overall, the results indicate that SAPPS preserves policy smoothness while remaining responsive to rapidly changing observations, leading to more stable and higher-performing control in dynamic adaptive optics environments.
+Overall, the results indicate that **SAPPS** balances smoothness and responsiveness more effectively as environment dynamics become faster, leading to improved performance in highly dynamic adaptive optics conditions.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/fded436b-ae81-43ee-86d2-64890e190b67" width="1100">
@@ -215,6 +215,7 @@ A full BibTeX entry and `CITATION.cff` file will be added upon publication.
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
