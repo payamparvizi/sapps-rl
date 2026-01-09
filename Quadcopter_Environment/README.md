@@ -58,7 +58,7 @@ https://github.com/user-attachments/assets/0ae71900-ce90-476f-986e-f95c5cf01360
 
 ## Key Results
 
-The plots below summarize altitude tracking and velocity behavior for **PPO**, **CAPS**, and **SAPPS (proposed method)** during the final episode of the real-world quadcopter experiment, where the objective is to reach and maintain a target altitude of \qty{1}{\meter}.
+The plots below summarize altitude tracking and velocity behavior for **PPO**, **CAPS**, and **SAPPS (proposed method)** during the final episode of the real-world quadcopter experiment, where the objective is to reach and maintain a target altitude of 1 meter. 
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/79a0e66c-42e5-4391-8563-dd99bdb34968" width="1100">
