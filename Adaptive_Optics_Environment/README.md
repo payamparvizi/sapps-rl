@@ -30,7 +30,15 @@ The focus of this environment is to assess whether **SAPPS** enables **smooth ye
 
 ## Key Results
 
-dfasfs
+The results below summarize fiber coupling efficiency and action smoothness for PPO, CAPS, LipsNet, and SAPPS across adaptive optics scenarios with increasing atmospheric drift velocity.
+
+At low drift velocity (\qty{5}{\meter/\second}), all policy-regularization methods outperform PPO in both coupling efficiency and smoothness, with SAPPS and CAPS exhibiting closely matched performance, consistent with the assumption that temporally consecutive observations change slowly in this regime.
+
+As drift velocity increases (\qty{50}{\meter/\second} and \qty{500}{\meter/\second}), differences between consecutive observations become more pronounced, and SAPPS consistently achieves higher average coupling efficiency while maintaining low action fluctuation relative to CAPS, LipsNet, and PPO. In these highly dynamic settings, CAPS exhibits reduced coupling efficiency despite strong smoothness, indicating that restricting action changes without accounting for observation variation can limit responsiveness.
+
+Overall, the results indicate that SAPPS preserves policy smoothness while remaining responsive to rapidly changing observations, leading to more stable and higher-performing control in dynamic adaptive optics environments.
+
+
 
 ---
 ## Relation to Prior Work
@@ -205,6 +213,7 @@ A full BibTeX entry and `CITATION.cff` file will be added upon publication.
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
