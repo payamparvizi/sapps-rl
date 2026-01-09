@@ -58,7 +58,7 @@ https://github.com/user-attachments/assets/0ae71900-ce90-476f-986e-f95c5cf01360
 
 ## Key Results
 
-The plots below summarize altitude tracking and velocity behavior for **PPO**, **CAPS**, and **SAPPS (proposed method)** during the final episode of the real-world quadcopter experiment, where the objective is to reach and maintain a target altitude of 1 meter.
+The plots below summarize altitude tracking and velocity behavior for **PPO**, **CAPS**, and **SAPPS (proposed method)** during the final episode of the real-world quadcopter experiment, with the objective of reaching and maintaining a target altitude of 1 meter.
 
 Across the trajectory, SAPPS achieves accurate tracking while exhibiting substantially reduced velocity oscillations relative to PPO. Although all methods reach the target during ascent, differences become more pronounced during stabilization: CAPS exhibits larger overshoot during convergence, whereas PPO frequently produces large-amplitude velocity changes and repeated saturation of the velocity command, leading to oscillatory behavior around the setpoint.
 
