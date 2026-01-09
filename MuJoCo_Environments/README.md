@@ -3,7 +3,7 @@
 This directory contains the **MuJoCo continuous-control benchmark environments** used to evaluate **State-Adaptive Proportional Policy Smoothing (SAPPS)** in the paper:
 
 📄 **Paper**: *Adaptive Policy Regularization for Smooth Control in Reinforcement Learning*   
-🔗 **Preprint**: arXiv (forthcoming)
+🔗 **Preprint**: In preparation; arXiv link will be added here.
 
 These tasks serve as standardized benchmarks to assess policy smoothness and overall performance in simulated robotic control scenarios.
 
@@ -185,7 +185,7 @@ The MuJoCo experiments provide standardized continuous-control benchmarks used t
 
 If you use this code in your research, please cite the associated paper.
 
-🔗 **Preprint**: arXiv (forthcoming)
+🔗 **Preprint**: In preparation; arXiv link will be added here.
 
 A full BibTeX entry and `CITATION.cff` file will be added upon publication.
 
