@@ -39,7 +39,7 @@ As drift velocity increases (\qty{50}{\meter/\second} and \qty{500}{\meter/\seco
 Overall, the results indicate that SAPPS preserves policy smoothness while remaining responsive to rapidly changing observations, leading to more stable and higher-performing control in dynamic adaptive optics environments.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/924b7a37-7e01-4aeb-9cf8-936de0fe510f" width="1100">
+  <img src="https://github.com/user-attachments/assets/fded436b-ae81-43ee-86d2-64890e190b67" width="1100">
 </p
 
 ---
@@ -215,6 +215,7 @@ A full BibTeX entry and `CITATION.cff` file will be added upon publication.
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
