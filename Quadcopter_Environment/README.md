@@ -3,7 +3,7 @@
 This directory contains the **real-world quadcopter control environment** used to evaluate **State-Adaptive Proportional Policy Smoothing (SAPPS)** in the paper:
 
 📄 **Paper**: *Adaptive Policy Regularization for Smooth Control in Reinforcement Learning*    
-🔗 **Preprint**: arXiv (forthcoming)
+🔗 **Preprint**: In preparation; arXiv link will be added here.
 
 Experiments are conducted on a **Bitcraze Crazyflie 2.1** nano quadcopter and demonstrate the effectiveness of SAPPS in producing **smooth, stable, and hardware-safe** control policies under real-world noise, delays, and disturbances.
 
@@ -198,7 +198,7 @@ The quadcopter experiments serve as a **hardware validation** of SAPPS, demonstr
 
 If you use this code in your research, please cite the associated paper.
 
-🔗 **Preprint**: arXiv (forthcoming)
+🔗 **Preprint**: In preparation; arXiv link will be added here.
 
 A full BibTeX entry and `CITATION.cff` file will be added upon publication.
 
