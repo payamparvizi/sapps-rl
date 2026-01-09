@@ -43,6 +43,7 @@ Overall, the results indicate that **SAPPS** balances smoothness and responsiven
 </p
 
 ---
+
 ## Relation to Prior Work
 
 This environment builds on prior research in RL for wavefront sensorless adaptive optics, including an earlier AO-RL simulation framework by the authors (see **Parvizi et al., *Reinforcement Learning Environment for Wavefront Sensorless Adaptive Optics in Single-Mode Fiber Coupled Optical Satellite Communications Downlinks*, Photonics 2023** – [https://doi.org/10.3390/photonics10121371](https://doi.org/10.3390/photonics10121371))
@@ -215,6 +216,7 @@ A full BibTeX entry and `CITATION.cff` file will be added upon publication.
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
