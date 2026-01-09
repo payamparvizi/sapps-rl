@@ -139,11 +139,9 @@ All results reported in the paper are averaged over multiple random seeds, and h
 
 ## Citation
 
-If you use this code in your research, please cite the associated paper.
-
-🔗 **Preprint**: In preparation; arXiv link will be added here.
-
-A full BibTeX entry and `CITATION.cff` file will be added upon publication.
+If you use this code in your research, please cite the associated paper.   
+Citation files are provided in `CITATION.cff` and `CITATION.bib`.   
+The arXiv link will be added once the preprint is available.
 
 ---
 
