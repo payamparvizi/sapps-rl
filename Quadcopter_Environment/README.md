@@ -196,11 +196,9 @@ The quadcopter experiments serve as a **hardware validation** of SAPPS, demonstr
 
 ## Citation
 
-If you use this code in your research, please cite the associated paper.
-
-🔗 **Preprint**: In preparation; arXiv link will be added here.
-
-A full BibTeX entry and `CITATION.cff` file will be added upon publication.
+If you use this code in your research, please cite the associated paper.  
+Citation files are provided in [`CITATION.cff`](../CITATION.cff) and [`CITATION.bib`](../CITATION.bib).  
+The arXiv link will be added once the preprint is available.
 
 ---
 
