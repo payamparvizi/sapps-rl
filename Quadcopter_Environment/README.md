@@ -159,17 +159,17 @@ Please follow the setup steps in that repository before running experiments on r
 
 ### Training in Simulation
 ```bash
-python train.py --task simulation
+python run_quadcopter.py --task simulation
 ```
 
 ### Training on Real Hardware
 ```bash
-python train.py --task real
+python run_quadcopter.py --task real
 ```
 
 ### Example – Setting target altitude and action limits
 ```bash
-python train.py --task real --target_altitude 1.0 --action_range 0.20
+python run_quadcopter.py --task real --target_altitude 1.0 --action_range 0.20
 ```
 
 Configuration parameters (e.g., target altitude or action range) can also be adjusted in the argument definitions under `utils/`.
