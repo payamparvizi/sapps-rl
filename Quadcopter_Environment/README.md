@@ -63,7 +63,7 @@ The plots below summarize performance and smoothness on standard MuJoCo continuo
 Across all environments, SAPPS achieves **competitive returns** while providing **substantial reductions in action volatility relative to PPO**. Compared to CAPS, both return and smoothness trends are **environment-dependent**, with SAPPS and CAPS exhibiting closely matched performance and alternating advantages across different tasks.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/924b7a37-7e01-4aeb-9cf8-936de0fe510f" width="1100">
+  <img src="https://github.com/user-attachments/assets/c9011cfe-3e6c-411f-864b-89136bea2ef8" width="1100">
 </p>
 
 ---
