@@ -205,17 +205,16 @@ The adaptive optics experiments in the paper use this environment to show that *
 
 ## Citation
 
-If you use this code in your research, please cite the associated paper.
-
-🔗 **Preprint**: In preparation; arXiv link will be added here.
-
-A full BibTeX entry and `CITATION.cff` file will be added upon publication.
+If you use this code in your research, please cite the associated paper.  
+Citation files are provided in [`CITATION.cff`](./CITATION.cff) and [`CITATION.bib`](./CITATION.bib).  
+The arXiv link will be added once the preprint is available.
 
 ---
 
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
