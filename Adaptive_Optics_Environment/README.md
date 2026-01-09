@@ -3,7 +3,7 @@
 This directory contains the **reinforcement learning (RL) environment for wavefront sensorless adaptive optics (AO)** used in the paper:
 
 📄 **Paper**: *Adaptive Policy Regularization for Smooth Control in Reinforcement Learning*    
-🔗 **Preprint**: arXiv (forthcoming)
+🔗 **Preprint**: In preparation; arXiv link will be added here.
 
 The environment is designed to evaluate **policy smoothness and control responsiveness** in **highly dynamic optical systems**, with a primary motivation drawn from **satellite-to-ground optical communication** scenarios.
 
@@ -207,7 +207,7 @@ The adaptive optics experiments in the paper use this environment to show that *
 
 If you use this code in your research, please cite the associated paper.
 
-🔗 **Preprint**: arXiv (forthcoming)
+🔗 **Preprint**: In preparation; arXiv link will be added here.
 
 A full BibTeX entry and `CITATION.cff` file will be added upon publication.
 
@@ -216,6 +216,7 @@ A full BibTeX entry and `CITATION.cff` file will be added upon publication.
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
+
 
 
 
