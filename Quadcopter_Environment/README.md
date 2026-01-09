@@ -54,8 +54,20 @@ https://github.com/user-attachments/assets/0ae71900-ce90-476f-986e-f95c5cf01360
   </tr>
 </table>
 
+---
+
+## Key Results
+
+The plots below summarize performance and smoothness on standard MuJoCo continuous-control tasks for **PPO**, **CAPS**, and **SAPPS**, evaluated over **20 random seeds per method**.
+
+Across all environments, SAPPS achieves **competitive returns** while providing **substantial reductions in action volatility relative to PPO**. Compared to CAPS, both return and smoothness trends are **environment-dependent**, with SAPPS and CAPS exhibiting closely matched performance and alternating advantages across different tasks.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/924b7a37-7e01-4aeb-9cf8-936de0fe510f" width="1100">
+</p>
 
 ---
+
 
 ## Hardware Platform
 
