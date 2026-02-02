@@ -198,7 +198,19 @@ The quadcopter experiments serve as a **hardware validation** of SAPPS, demonstr
 
 If you use this code in your research, please cite the associated paper.  
 Citation files are provided in [`CITATION.cff`](../CITATION.cff) and [`CITATION.bib`](../CITATION.bib).  
-The arXiv link will be added once the preprint is available.
+
+```bibtex
+@article{parvizi2026sapps,
+  title   = {Adaptive Policy Regularization for Smooth Control in Reinforcement Learning},
+  author  = {Parvizi, Payam and Naik, Abhishek and Bellinger, Colin and Cheriton, Ross and Spinello, Davide},
+  journal = {TechRxiv},
+  year    = {2026},
+  month   = {February},
+  note    = {Preprint},
+  doi     = {10.36227/techrxiv.177004949.91897305/v1},
+  url     = {https://doi.org/10.36227/techrxiv.177004949.91897305/v1}
+}
+```
 
 ---
 
