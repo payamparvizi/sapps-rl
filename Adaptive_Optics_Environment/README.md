@@ -207,40 +207,22 @@ The adaptive optics experiments in the paper use this environment to show that *
 
 If you use this code in your research, please cite the associated paper.  
 Citation files are provided in [`CITATION.cff`](../CITATION.cff) and [`CITATION.bib`](../CITATION.bib).  
-The arXiv link will be added once the preprint is available.
+
+```bibtex
+@article{parvizi2026sapps,
+  title   = {Adaptive Policy Regularization for Smooth Control in Reinforcement Learning},
+  author  = {Parvizi, Payam and Naik, Abhishek and Bellinger, Colin and Cheriton, Ross and Spinello, Davide},
+  journal = {TechRxiv},
+  year    = {2026},
+  month   = {February},
+  note    = {Preprint},
+  doi     = {10.36227/techrxiv.177004949.91897305/v1},
+  url     = {https://doi.org/10.36227/techrxiv.177004949.91897305/v1}
+}
+```
 
 ---
 
 ## Acknowledgments
 
 This work was supported in part by the **Natural Sciences and Engineering Research Council of Canada (NSERC)** and by the **National Research Council Canada (NRC)**.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
