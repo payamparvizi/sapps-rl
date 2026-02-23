@@ -605,7 +605,6 @@ class AOEnv(gym.Env):
         bottom_sum = next_state[p[-edge_width:, :]].sum()
 
         norm_factor = next_state.sum()
-        #denom = norm_factor#max(float(norm_factor))
 
         tip_error  = abs(left_sum - right_sum) / norm_factor
         tilt_error = abs(top_sum - bottom_sum) / norm_factor
