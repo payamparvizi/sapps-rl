@@ -67,6 +67,7 @@ class AOEnv(gym.Env):
         self._c_mode1 = c_mode1
         self._seed = seed_v
         self._layer_no = layer_no
+        self._obs_dim = obs_dim
         
         # Parameters used in the environment:
         self.parameters_init(act_dim, atm_vel, obs_dim, timesteps_per_episode, atm_fried)
