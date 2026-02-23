@@ -554,7 +554,7 @@ class AOEnv(gym.Env):
         return reward, rew_fiber
 
 
-    def tip_tilt_calc(self, next_state):
+    def tip_tilt_calc_5(self, next_state):
         
         # calculating the tip and tilt
         p = np.array([[20, 21, 22, 23, 24], 
@@ -580,6 +580,35 @@ class AOEnv(gym.Env):
         
         tip_error = abs(pi1_pi2_sum - pi4_pi5_sum)/norm_factor # tip
         tilt_error = abs(p1j_p2j_sum - p4j_p5j_sum)/norm_factor  # tilt
+
+        error_sum = tip_error + tilt_error
+        
+        return error_sum
+
+    def tip_tilt_calc(self, next_state, edge_width=2):
+        n = self._obs_dim
+        next_state = np.asarray(next_state)
+
+        if next_state.size != n * n:
+            raise ValueError(f"Expected length {n*n}, got {next_state.size}")
+
+        if edge_width < 1 or 2 * edge_width > n:
+            raise ValueError("Invalid edge_width for this n")
+
+        # build index map (same orientation as your p)
+        p = np.arange(n * n).reshape(n, n)[::-1, :]
+
+        left_sum  = next_state[p[:, :edge_width]].sum()
+        right_sum = next_state[p[:, -edge_width:]].sum()
+
+        top_sum    = next_state[p[:edge_width, :]].sum()
+        bottom_sum = next_state[p[-edge_width:, :]].sum()
+
+        norm_factor = next_state.sum()
+        #denom = norm_factor#max(float(norm_factor))
+
+        tip_error  = abs(left_sum - right_sum) / norm_factor
+        tilt_error = abs(top_sum - bottom_sum) / norm_factor
 
         error_sum = tip_error + tilt_error
         
